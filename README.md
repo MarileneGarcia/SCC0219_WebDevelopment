@@ -2,10 +2,11 @@
 
  Mockup link https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1
 
-Alunos
-[Bruno Helou][https://github.com/MarileneGarcia]
-[Marilene Andrade Garcia][https://github.com/Brunohelou]
-[Rafael Farias Pinho][https://github.com/rafaelfpinho]
+Alunos:
+
+[Bruno Helou] (https://github.com/MarileneGarcia) <br>
+[Marilene Andrade Garcia](https://github.com/Brunohelou) <br>
+[Rafael Farias Pinho](https://github.com/rafaelfpinho)
 
 
 
