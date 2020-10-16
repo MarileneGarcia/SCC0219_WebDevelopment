@@ -1,12 +1,9 @@
 # scc-0219-devweb-glassesStore
-
- Mockup link https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/pages/images/logo_size.jpg">
-    <img src="https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/pages/images/logo_size.jpg" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/pages/images/logo_size.jpg" alt="Logo" width="300" height="300">
   </a>
 
   <h3 align="center">Loja de Oculos 017</h3>
@@ -22,6 +19,10 @@
 [Rafael Farias Pinho](https://github.com/rafaelfpinho)
 </p>
 
+ <p align="left">
+ Obs. <br>
+ [Acesse o Mockup](https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1)
+</p>
 </p>
 
 
