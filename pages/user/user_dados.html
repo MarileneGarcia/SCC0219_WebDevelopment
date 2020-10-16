@@ -52,18 +52,20 @@
         <p class="page-header">Meu Perfil</p>
         <p class="meus-dados" >Meus Dados</p>
         <hr class="black">
-        <p class="nome" style="top: 350px;">Nome:</p>
-        <p class="info" style="top: 350px;">Paulo</p>
-        <p class="nome"style="top: 402px;">Sobrenome:</p>
-        <p class="info" style="top: 402px;">da Silva</p>
-        <p class="nome"style="top: 454px;">Senha:</p>
-        <p class="info" style="top: 454px;">*******</p>
-        <p class="nome"style="top: 506px;">Data de Nascimento:</p>
-        <p class="info" style="top: 506px;">04/10/1985</p>
-        <p class="nome"style="top: 558px;">Telefone para Contato:</p>
-        <p class="info" style="top: 558px;">(85)99006 4090</p>
+        <form action="/action_page.php">
+            <label for="nome" class="nome" style="top: 350px">Nome:</label>
+            <input class="info" style="top: 350px;" type="text" id="nome" name="nome"><br><br>
+            <label for="sobrenome" class="nome" style="top: 402px">Sobrenome:</label>
+            <input class="info" style="top: 402px;" type="text" id="sobrenome" name="sobrenome"><br><br>
+            <label for="senha" class="nome" style="top: 454px">Senha:</label>
+            <input class="info" style="top: 454px;" type="password" id="senha" name="senha"><br><br>
+            <label for="data" class="nome" style="top: 506px">Data de Nascimento:</label>
+            <input class="info" style="top: 506px;" type="date" id="data" name="data"><br><br>
+            <label for="telefone" class="nome" style="top: 558px">Telefone para Contato:</label>
+            <input class="info" style="top: 558px;" type="tel" id="telefone" name="tel"><br><br>
 
-        <a href="" class="edit">Editar Dados</a>
+            <input class="edit" type="submit" value="Editar Dados">
+          </form> 
 
     </div>
 
