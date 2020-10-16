@@ -48,23 +48,25 @@
         <a href="" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
     </div>
     <div class="dados" >
-        <p class="page-header">Meu Perfil</p>
-        <p class="meus-dados" >Meus Dados</p>
-        <hr class="black">
-        <p class="nome" style="top: 350px;">Endereço:</p>
-        <p class="info" style="top: 350px;">Rua Nunes Valente</p>
-        <p class="nome"style="top: 402px;">Número:</p>
-        <p class="info" style="top: 402px;">3500</p>
-        <p class="nome"style="top: 454px;">Complemento:</p>
-        <p class="info" style="top: 454px;">ap 1201</p>
-        <p class="nome"style="top: 506px;">CEP:</p>
-        <p class="info" style="top: 506px;">60125077</p>
-        <p class="nome"style="top: 558px;">Estado:</p>
-        <p class="info" style="top: 558px;">CE</p>
-        <p class="nome"style="top: 610px;">Cidade:</p>
-        <p class="info" style="top: 610px;">Fortaleza</p>
+        <form action="/action_page.php">
+            <p class="page-header">Meu Perfil</p>
+            <p class="meus-dados" >Meus Dados</p>
+            <hr class="black">
+            <label for="endereco" class="nome" style="top: 350px;">Endereço:</label>
+            <input class="info" style="top: 350px;" type="text" id="endereco" name="endereco"><br><br>
+            <label for="numero" class="nome" style="top: 402px">Número:</label>
+            <input class="info" style="top: 402px;" type="text;" id="numero" name="numero"><br><br>
+            <label for="complemento" class="nome" style="top: 454px">Complemento:</label>
+            <input class="info" style="top: 454px;" type="text;" id="complemento" name="complemento"><br><br>
+            <label for="cep" class="nome" style="top: 506px">CEP:</label>
+            <input class="info" style="top: 506px;" type="text;" id="cep" name="cep"><br><br>
+            <label for="estado" class="nome" style="top: 558px">Estado:</label>
+            <input class="info" style="top: 558px;" type="text;" id="estado" name="estado"><br><br>
+            <label for="estado" class="nome" style="top: 610px">Cidade:</label>
+            <input class="info" style="top: 610px;" type="text;" id="cidade" name="cidade"><br><br>
 
-        <a href="" class="edit">Editar Endereço</a>
+            <input class="edit" type="submit" value="Editar Endereço">
+          </form> 
 
     </div>
 
