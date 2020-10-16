@@ -11,19 +11,17 @@
   <p align="center">
     Disciplina SCC0219 - Desenvolvimento Web
   </p>
+</p>
 
- <p align="left">
-  Alunos: <br>
-[Bruno Helou](https://github.com/Brunohelou) 
-[Marilene Andrade Garcia](https://github.com/MarileneGarcia) 
+Alunos: <br>
+[Bruno Helou](https://github.com/Brunohelou) <br>
+[Marilene Andrade Garcia](https://github.com/MarileneGarcia) <br>
 [Rafael Farias Pinho](https://github.com/rafaelfpinho)
-</p>
 
- <p align="left">
- Obs. <br>
- [Acesse o Mockup](https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1)
-</p>
-</p>
+Obs. <br>
+[Acesse o Mockup](https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1)
+
+
 
 
 
