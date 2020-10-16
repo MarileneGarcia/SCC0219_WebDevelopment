@@ -1,7 +1,12 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 div.header{
     width: 100%;
     height: 20vh;
     background-color: #F1F1F1;
+    
 }
 div.sub-header{
     width: 100%;
@@ -11,8 +16,8 @@ div.sub-header{
 
 div.slider{
     width: 100%;
-    height: 65vh;
-    background:  url("https://wallpapercave.com/wp/wp3117193.jpg");
+    height: 80vh;
+    background:  url("https://wallpapercave.com/wp/wp2366361.jpg");
     background-size: cover;
 }
 
@@ -37,6 +42,7 @@ div.galery{
     height: 110vh;
     background-color: #FFFFFF;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 div.glass {
@@ -47,7 +53,7 @@ div.glass {
     margin-right: 6vw;
     margin-left: 0vw;
     margin-top: 6vw;
-    background-color: #EDEDED;
+    background-color: #f7f7f7;
 }
 
 div.glass3 {
@@ -63,9 +69,118 @@ height: 20vh;
 }
 
 div.footer{
-   
+   padding-top: 2%;
     width: 100%;
     height: 10vh;
     background-color: #EDEDED;
     text-align: center;
+    color: #525050;
+    text-decoration: underline;
 }
+
+.block{
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0);
+    width: 30vw;
+    height: 100%;
+    border-width: 1px;
+    text-align: left;
+}
+
+p{
+    vertical-align: middle;
+    text-align: center;
+    color: #f3bc46;
+    font-size: 40px;
+}
+
+.searchbar{
+    background: url('https://www.flaticon.com/svg/static/icons/svg/56/56936.svg') no-repeat scroll 2px 2px;
+    background-size: contain;
+    background-position: 420px;
+    background-color: white;
+    vertical-align: middle;
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 0.7vw;
+    font-size: 1.3vw;
+    height: 4vh;
+    border-radius: 15px;
+    border-color: #dcdcdc00;
+}
+
+
+.headera{
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+
+.colum3{
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    height: 20%;
+    margin-top: 50px;
+    margin-left: 40px;
+
+}
+
+.row3{
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 60px;
+}
+
+h1, h2, h3 {
+color: rgb(78, 78, 78);
+margin: 0;
+margin-bottom: 10px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #f3bc46;
+  }
+
+
+  .fav{
+      background: url('https://www.flaticon.com/svg/static/icons/svg/25/25424.svg') no-repeat scroll 2px 2px;
+      background-size: contain;
+      background-color: rgba(255, 255, 255, 0);
+      vertical-align: middle;
+      background-position: center;
+  }
+
+  .person{
+    background: url('https://www.flaticon.com/svg/static/icons/svg/54/54647.svg') no-repeat scroll 2px 2px;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0);
+    vertical-align: middle;
+    background-position: center;
+}
+
+.cart{
+    background: url('https://www.flaticon.com/svg/static/icons/svg/34/34568.svg') no-repeat scroll 2px 2px;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0);
+    vertical-align: middle;
+    background-position: center;
+}
+
+button{
+    border: 1px solid;
+    width: 30%;
+    height: 7%;
+    background-color: rgb(233, 216, 64);
+}
+
