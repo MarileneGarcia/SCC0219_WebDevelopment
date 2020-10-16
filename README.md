@@ -29,8 +29,8 @@ Obs. <br>
 ## Informações sobre o projeto
 
 * [Descrição do projeto](descricao_projeto.pdf)
-* [Mockup das telas](#mockup-das-telas)<br>
-  *[Imagem de uma versão da Tela Principal](#exemplo-tela)
+* [Mockup das telas](https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1)<br>
+  *[Imagem de uma versão da Tela Principal](https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/mockup_telas/Imagens_telas/Tela%20Principal%20(versao%202).png)
 
 
 
@@ -42,5 +42,5 @@ Disponível no [Figma](https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses
 Mas também em [pdf](mockup_telas/Loja_Oculos017.pdf)
 
 ### Exemplo tela
-[Tela Principal](https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/mockup_telas/Imagens_telas/Tela%20Principal%20(versao%202).png)
+![Tela Principal](https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/mockup_telas/Imagens_telas/Tela%20Principal%20(versao%202).png)
 
