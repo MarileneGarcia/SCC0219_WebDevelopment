@@ -4,8 +4,8 @@
 
 Alunos:
 
-[Bruno Helou] (https://github.com/MarileneGarcia) <br>
-[Marilene Andrade Garcia](https://github.com/Brunohelou) <br>
+[Bruno Helou](https://github.com/Brunohelou) <br>
+[Marilene Andrade Garcia](https://github.com/MarileneGarcia) <br>
 [Rafael Farias Pinho](https://github.com/rafaelfpinho)
 
 
