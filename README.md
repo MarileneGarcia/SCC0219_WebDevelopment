@@ -2,35 +2,26 @@
 
  Mockup link https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1
 
-Alunos:
-
-[Bruno Helou](https://github.com/Brunohelou) <br>
-[Marilene Andrade Garcia](https://github.com/MarileneGarcia) <br>
-[Rafael Farias Pinho](https://github.com/rafaelfpinho)
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/pages/images/logo_size.jpg">
+    <img src="https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/pages/images/logo_size.jpg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Loja de Oculos 017</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    Disciplina SCC0219 - Desenvolvimento Web
   </p>
+
+ <p align="left">
+  Alunos: <br>
+[Bruno Helou](https://github.com/Brunohelou) <br>
+[Marilene Andrade Garcia](https://github.com/MarileneGarcia) <br>
+[Rafael Farias Pinho](https://github.com/rafaelfpinho)
+</p>
+
 </p>
 
 
