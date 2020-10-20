@@ -41,6 +41,11 @@ Disponível no [Figma](https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses
 
 Mas também em [pdf](mockup_telas/Loja_Oculos017.pdf)
 
+
+## Diagrama do Projeto
+
+Disponível no [Miro](https://miro.com/welcomeonboard/xw6MOhSIZFKC840hfqLhsjpporNo4MoD8CBYwSJWc3FkZGGucrW8RAW1t1NuX386)
+
 ### Exemplo tela
 ![Tela Principal](https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/mockup_telas/Imagens_telas/Tela%20Principal%20(versao%202).png)
 
