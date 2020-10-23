@@ -31,8 +31,7 @@ Obs. <br>
 * [Descrição do projeto](descricao_projeto.pdf)
 * [Mockup das telas](https://www.figma.com/file/90M9GNbrUwnLGpIPAdX5Nn/Glasses-Store?node-id=0%3A1)<br>
   *[Imagem de uma versão da Tela Principal](https://raw.githubusercontent.com/Brunohelou/scc-0219-devweb-glassesStore/master/mockup_telas/Imagens_telas/Tela%20Principal%20(versao%202).png)
-  * [Diagrama do Projeto](https://miro.com/app/board/o9J_kiP_Um8=/)
-
+* [Diagrama do Projeto](https://miro.com/app/board/o9J_kiP_Um8=/)
 
 
 <!-- ABOUT THE PROJECT -->
