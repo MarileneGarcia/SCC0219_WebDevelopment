@@ -2,15 +2,23 @@ html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+.row{
+    text-align: center;
+    width: 80%;
+    padding-left: 12vw;
+}
+
 div.header{
     width: 100%;
-    height: 16vh;
+    height: 120px;
     background-color: #F1F1F1;
     
 }
 div.sub-header{
     width: 100%;
-    height: 4vh;
+    height: 30px;
     background-color: #DCDCDC;
 }
 
@@ -39,26 +47,28 @@ div.slidown {
 div.galery{
    
     width: 100%;
-    height: 110vh;
+    height: 810px;
     background-color: #FFFFFF;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    overflow: scroll;
+    
+    
+    
 }
 
 div.glass {
     text-align: center;
     display: inline-block;
-    width: 40vh;
-    height: 40vh;
+    width: 250px;
+    height: 250px;
     margin-right: 6vw;
     margin-left: 0vw;
     margin-top: 6vw;
     background-color: #f7f7f7;
 }
 
-div.glass3 {
-   margin-right: 0;
-}
+
 
 
 .glassimg{
@@ -69,9 +79,9 @@ height: 20vh;
 }
 
 div.footer{
-   padding-top: 2%;
+   
     width: 100%;
-    height: 10vh;
+    height: 30px;
     background-color: #EDEDED;
     text-align: center;
     color: #525050;
@@ -96,17 +106,17 @@ p{
 }
 
 .searchbar{
-    background: url('https://www.flaticon.com/svg/static/icons/svg/56/56936.svg') no-repeat scroll 2px 2px;
-    background-size: contain;
-    background-position: 420px;
+    background: url('https://www.flaticon.com/svg/static/icons/svg/56/56936.svg') no-repeat scroll 2vw 2vw;
+    background-size: 1.3vw;
+    background-position: 27vw;
     background-color: white;
     vertical-align: middle;
     text-align: left;
     margin-top: 20px;
     width: 100%;
     padding-left: 0.7vw;
-    font-size: 1.3vw;
-    height: 4vh;
+    font-size: 15px;
+    height: 30px;
     border-radius: 15px;
     border-color: #dcdcdc00;
 }
@@ -117,20 +127,28 @@ p{
     color: rgb(58, 58, 58);
     display: inline-block;
     margin-top: 10%;
-    margin-left: 15px;
-    font-size: 15px;
+    margin-left: 1vw;
+    font-size: 1.1vw;
     font-weight: bold;
 
+}
+
+.headera:hover{
+    background-color:  #f3bc46;
+    color: white;
+    transition: border-radius 500ms, 
+    color 1s,
+    background-color 0.3s;
 }
 
 
 .colum3{
     display: inline-block;
     vertical-align: middle;
-    width: 10%;
-    height: 20%;
-    margin-top: 50px;
-    margin-left: 40px;
+    width: 3vw;
+    height: 3vw;
+    margin-top: 5vh;
+    margin-left: 4vw;
 
 }
 
@@ -139,7 +157,7 @@ p{
     display: block;
     width: 100%;
     height: 100%;
-    margin-left: 60px;
+    margin-left: 4vw;
 }
 
 h1, h2, h3 {
@@ -155,15 +173,22 @@ margin-bottom: 10px;
 
   .fav{
       background: url('https://www.flaticon.com/svg/static/icons/svg/25/25424.svg') no-repeat scroll 2px 2px;
-      background-size: contain;
+      background-size: 1.5vw;
       background-color: rgba(255, 255, 255, 0);
       vertical-align: middle;
       background-position: center;
   }
 
+  .colum3:hover {
+    background-color: #f3bc46;
+    transition: border-radius 500ms, 
+    color 1s,
+    background-color 0.5s;
+  }
+
   .person{
     background: url('https://www.flaticon.com/svg/static/icons/svg/54/54647.svg') no-repeat scroll 2px 2px;
-    background-size: contain;
+    background-size: 1.5vw;
     background-color: rgba(255, 255, 255, 0);
     vertical-align: middle;
     background-position: center;
@@ -171,7 +196,7 @@ margin-bottom: 10px;
 
 .cart{
     background: url('https://www.flaticon.com/svg/static/icons/svg/34/34568.svg') no-repeat scroll 2px 2px;
-    background-size: contain;
+    background-size: 1.5vw;
     background-color: rgba(255, 255, 255, 0);
     vertical-align: middle;
     background-position: center;
@@ -182,5 +207,12 @@ button{
     width: 30%;
     height: 7%;
     background-color: rgb(233, 216, 64);
+}
+
+button:hover{
+    background-color: white;
+    transition: border-radius 500ms, 
+    color 1s,
+    background-color 0.5s;
 }
 
