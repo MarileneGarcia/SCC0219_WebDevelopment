@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../header/header.css" rel="stylesheet">
+    <link href="user.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>017 Glass Store</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="header" style="position: fixed;">
+            <div class="header" style="text-align: center;">
+                <div class="block">
+                    <a href="../principal/principal.html">
+                        <img src="../images/logo_borderless.png" alt="logo" style="position: absolute; top: -30px; left: 43px;"></a>
+                </div>
+
+                <div class="block">
+                    <div class="colum2"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
+                    <a class="headera" href="">ÓCULOS DE SOL</a>
+                    <a class="headera" href="">ÓCULOS DE GRAU</a>
+                    <a class="headera" href="">EVERGLASSES</a>
+
+
+                </div>
+
+                <div class="block">
+                    <div class="row3">
+                        <a href="">
+                            <div class="colum3 fav"></div>
+                        </a>
+                        <a href="">
+                            <div class="colum3 person"></div>
+                        </a>
+                        <a href="">
+                            <div class="colum3 cart"></div>
+                        </a>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="sub-header" style="text-align: center;">
+            </div>
+
+        </div>
+        <div class="box">
+            <a href="user_dados.html" class="box-p" style="left: 2px;">Meus Dados</a>
+            <hr class="white" style="top: 96px;">
+            <a href="user_address.html" class="box-p" style="left: 2px; top: 98px;">Endereço</a>
+            <hr class="white" style="top: 188px;">
+            <a href="" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
+        </div>
+        <div class="dados">
+            <p class="page-header">Meu Perfil</p>
+            <p class="meus-dados">Meus Dados</p>
+            <hr class="black">
+            <form @submit="checagem" method="post">
+                <label for="endereco" class="nome" style="top: 350px;">Endereço:</label>
+                <input v-model="endereco" type="text" class="info" style="top: 350px;" type="text" id="endereco" name="endereco"><br><br>
+                <label for="numero" class="nome" style="top: 402px">Número:</label>
+                <input v-model="numero" type="number" min="0" class=" info " style="top: 402px; " type="text " id="numero " name="numero "><br><br>
+                <label for="complemento " class="nome " style="top: 454px ">Complemento:</label>
+                <input v-model="complemento" type="text" class="info " style="top: 454px; " type="text " id="complemento " name="complemento "><br><br>
+                <label for="cep " class="nome " style="top: 506px ">CEP:</label>
+                <input v-model="cep" type="text" class="info " style="top: 506px; " type="text " id="cep " name="cep "><br><br>
+                <label for="estado " class="nome " style="top: 558px ">Estado:</label>
+                <input v-model="estado" type="text" class="info " style="top: 558px; " type="text " id="estado " name="estado "><br><br>
+                <label for="estado" class="nome " style="top: 610px ">Cidade:</label>
+                <input v-model="cidade" type="text" class="info " style="top: 610px; " type="text " id="cidade " name="cidade "><br><br>
+
+                <input class="edit " type="submit" value="Editar Endereço ">
+            </form>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script src="https://unpkg.com/vue "></script>
+<script src="./user_adress_forms.js ">
+</script>
