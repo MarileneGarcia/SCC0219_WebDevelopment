@@ -4,19 +4,23 @@
 <link href="principal.css" rel="stylesheet">
 <meta charset="utf-8" />
 <title>017 Glass Store</title>
+
+
 </head>
 
 
 <body>
-    <div class="header" style="position: fixed;">
-<div class="header" style="text-align: center;"> 
+    <div id="app">
+    <div  class="header" style="position: fixed;">
+<div  class="header" style="text-align: center;"> 
     <div class="block"><a href=""> <img style="height: 100%; width: auto;" src="../images/logo_borderless.png"> </div></a>
 
-    <div class="block">
+    <div  class="block">
     <div class="colum2"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
     <a class="headera" href="">ÓCULOS DE SOL</a>
     <a class="headera"  href="">ÓCULOS DE GRAU</a>
     <a class="headera"  href="">EVERGLASSES</a>
+    
 
 
 </div>
@@ -51,47 +55,24 @@
 </div>
 
 
-<div class="galery"> <h1>Promoções da Galeria </h1> 
+<div  class="galery"> <h1>Promoções da Galeria </h1> 
 
-<div class="row">    
-<div class="glass">  <h2>Modelo 1 </h2>
-    <img class="glassimg" src="../images/1-removebg-preview.png" >
-    <h3>R$ 250,00</h3>
+<ul v-for="item of glasses" class="row">    
+<list class="glass">  <h2>{{item.model}} </h2>
+    <img class="glassimg" :src="item.img" >
+    <h3>{{item.type}}</h3>
     <button>Ver mais</button>
-</div>
-
-<div class="glass" > <h2>Modelo 2</h2>
-<img class="glassimg" src="../images/2-removebg-preview.png" >
-<h3>R$ 350,00</h3>
-<button>Ver mais</button>
-</div>
-<div class="glass" ><h2>Modelo 3</h2>
-    <img class="glassimg" src="../images/3-removebg-preview.png" >
-    <h3>R$ 150,00</h3>
-    <button>Ver mais</button>
-    </div>
-</div>
-<div class="row">
-    <div class="glass" >  <h2>Modelo 4 </h2>
-        <img class="glassimg" src="../images/4-removebg-preview.png" >
-        <h3>R$ 450,00</h3>
-        <button>Ver mais</button>
-    </div>
-    
-    <div class="glass" > <h2>Modelo 5</h2>
-    <img class="glassimg" src="../images/5-removebg-preview.png" >
-    <h3>R$ 350,00</h3>
-    <button>Ver mais</button>
-    </div>
-    <div class="glass" ><h2>Modelo 6</h2>
-        <img class="glassimg" src="../images/bce8640886-removebg-preview(1).png" >
-        <h3>R$ 300,00</h3>
-        <button>Ver mais</button>
-        </div>
-</div>
-</div>
+</list>
+</ul>
 
 
 <div class="footer">desenvolvido por: Marilene Garcia, Bruno Helou, Rafael Pinho</div>
+
+
+</div>
 </body>
 </html>
+<script src="https://unpkg.com/vue"></script>
+<script  src="./principal.js">
+</script>
+
