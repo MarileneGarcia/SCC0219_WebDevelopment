@@ -2,7 +2,8 @@
 <html>
 <head>
 <link href="principal.css" rel="stylesheet">
-<meta charset="utf-8" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
 <title>017 Glass Store</title>
 
 
@@ -11,39 +12,55 @@
 
 <body>
     <div id="app">
-    <div  class="header" style="position: fixed;">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left"  id="mySidebar" style="display:none; width:25%; background-color: rgb(223, 223, 223);">
+        <button class="w3-bar-item w3-button w3-large"
+        onclick="w3_close()">Close &times;</button>
+        <div >
+        <div v-for="item of favs" class="favs">
+            <div ><h2>{{item.model}} </h2>
+                <img class="glassimg" :src="item.img" >
+                <h3>{{item.price}}</h3>
+                <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
+            </div>
+            <hr>
+        </div>
+
+    </div>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    
+</div>
+      
+
+
+
+    <div id="app">
+    <div  class="header" >
 <div  class="header" style="text-align: center;"> 
     <div class="block"><a href=""> <img style="height: 100%; width: auto;" src="../images/logo_borderless.png"> </div></a>
 
     <div  class="block">
-    <div class="colum2"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
-    <a class="headera" href="">ÓCULOS DE SOL</a>
-    <a class="headera"  href="">ÓCULOS DE GRAU</a>
-    <a class="headera"  href="">EVERGLASSES</a>
-    
+    <div style="text-align: center;" > <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
+    <ul style="padding-left: 0; margin-top: 0;" id="menu">
+        <li><a class="headera" href="">ÓCULOS DE SOL</a></li>
+        <li><a class="headera"  href="">ÓCULOS DE GRAU</a></li>
+        <li ><a class="headera"  href="">EVERGLASSES</a></li>
+</ul>
 
 
 </div>
 
     <div class="block">
         <div class="row3">
-    <a href=""><div class="colum3 fav"></div></a>
+   <a onclick="w3_open()" > <div class="colum3 fav">  </div></a>
     <a href="../user/user_dados.html"><div class="colum3 person"></div></a>
     <a href=""><div class="colum3 cart"></div></a>
 </div>
-
-
     </div>
-
-
 </div>
-
-
+</div>
 <div class="sub-header" style="text-align: center;">
 </div>
-
-</div>
-
 
 <div class="slider" style="text-align: center;">
 </div>
@@ -57,20 +74,21 @@
 
 <div  class="galery"> <h1>Promoções da Galeria </h1> 
 
-<ul v-for="item of glasses" class="row">    
-<list class="glass">  <h2>{{item.model}} </h2>
+<div v-for="item of glasses" class="glass">    
+<div ><h2>{{item.model}} </h2>
     <img class="glassimg" :src="item.img" >
-    <h3>{{item.type}}</h3>
-    <button>Ver mais</button>
-</list>
-</ul>
-
-
-<div class="footer">desenvolvido por: Marilene Garcia, Bruno Helou, Rafael Pinho</div>
+    <h3>{{item.price}}</h3>
+    <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
+    <button v-on:click="fav(item)" >Add to Fav</button>
+</div>
+</div>
 
 
 </div>
+<div class="footer">desenvolvido por: Marilene Garcia, Bruno Helou, Rafael Pinho</div>
+</div>
 </body>
+
 </html>
 <script src="https://unpkg.com/vue"></script>
 <script  src="./principal.js">
