@@ -9,74 +9,70 @@
 </head>
 
 <body>
-
-    <div class="header" style="position: fixed;">
-        <div class="header" style="text-align: center;">
-            <div class="block">
-                <a href="../principal/principal.html">
-                    <img src="../images/logo_borderless.png" alt="logo" style="position: absolute; top: -30px; left: 43px;"></a>
-            </div>
-
-            <div class="block">
-                <div class="colum2"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
-                <a class="headera" href="">ÓCULOS DE SOL</a>
-                <a class="headera" href="">ÓCULOS DE GRAU</a>
-                <a class="headera" href="">EVERGLASSES</a>
-
-
-            </div>
-
-            <div class="block">
-                <div class="row3">
-                    <a href="">
-                        <div class="colum3 fav"></div>
-                    </a>
-                    <a href="">
-                        <div class="colum3 person"></div>
-                    </a>
-                    <a href="">
-                        <div class="colum3 cart"></div>
-                    </a>
+    <div id="app">
+        <div class="header" style="position: fixed;">
+            <div class="header" style="text-align: center;">
+                <div class="block">
+                    <a href="../principal/principal.html">
+                        <img src="../images/logo_borderless.png" alt="logo" style="position: absolute; top: -30px; left: 43px;"></a>
                 </div>
 
+                <div class="block">
+                    <div class="colum2"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
+                    <a class="headera" href="">ÓCULOS DE SOL</a>
+                    <a class="headera" href="">ÓCULOS DE GRAU</a>
+                    <a class="headera" href="">EVERGLASSES</a>
+                </div>
 
+                <div class="block">
+                    <div class="row3">
+                        <a href="">
+                            <div class="colum3 fav"></div>
+                        </a>
+                        <a href="">
+                            <div class="colum3 person"></div>
+                        </a>
+                        <a href="">
+                            <div class="colum3 cart"></div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-
+            <div class="sub-header" style="text-align: center;">
+            </div>
         </div>
 
-
-        <div class="sub-header" style="text-align: center;">
+        <div class="box">
+            <a href="user_dados.html" class="box-p" style="left: 2px;">Meus Dados</a>
+            <hr class="white" style="top: 96px;">
+            <a href="user_address.html" class="box-p" style="left: 2px; top: 98px;">Endereço</a>
+            <hr class="white" style="top: 188px;">
+            <a href="" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
         </div>
 
+        <div class="dados">
+            <p class="page-header">Meu Perfil</p>
+            <p class="meus-dados">Meus Dados</p>
+            <hr class="black">
+            <p class="nome" style="top: 350px;">Endereço:</p>
+            <p id="rua" class="info" style="top: 350px;">{{ endereco }}</p>
+            <p class="nome" style="top: 402px;">Número:</p>
+            <p id="numero" class="info" style="top: 402px;">{{ numero }}</p>
+            <p class="nome" style="top: 454px;">Complemento:</p>
+            <p id="complemento" class="info" style="top: 454px;">{{ complemento }}</p>
+            <p class="nome" style="top: 506px;">CEP:</p>
+            <p id="cep" class="info" style="top: 506px;">{{ cep }}</p>
+            <p class="nome" style="top: 558px;">Estado:</p>
+            <p id="estado" class="info" style="top: 558px;">{{ estado }}</p>
+            <p class="nome" style="top: 610px;">Cidade:</p>
+            <p id="cidade" class="info" style="top: 610px;"> {{ cidade }}</p>
+            <a href="user_address_forms.html" class="edit">Editar Endereço</a>
+        </div>
     </div>
-    <div class="box">
-        <a href="user_dados.html" class="box-p" style="left: 2px;">Meus Dados</a>
-        <hr class="white" style="top: 96px;">
-        <a href="user_address.html" class="box-p" style="left: 2px; top: 98px;">Endereço</a>
-        <hr class="white" style="top: 188px;">
-        <a href="" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
-    </div>
-    <div class="dados">
-        <p class="page-header">Meu Perfil</p>
-        <p class="meus-dados">Meus Dados</p>
-        <hr class="black">
-        <p class="nome" style="top: 350px;">Endereço:</p>
-        <p class="info" style="top: 350px;">Rua Nunes Valente</p>
-        <p class="nome" style="top: 402px;">Número:</p>
-        <p class="info" style="top: 402px;">3500</p>
-        <p class="nome" style="top: 454px;">Complemento:</p>
-        <p class="info" style="top: 454px;">ap 1201</p>
-        <p class="nome" style="top: 506px;">CEP:</p>
-        <p class="info" style="top: 506px;">60125077</p>
-        <p class="nome" style="top: 558px;">Estado:</p>
-        <p class="info" style="top: 558px;">CE</p>
-        <p class="nome" style="top: 610px;">Cidade:</p>
-        <p class="info" style="top: 610px;">Fortaleza</p>
-
-        <a href="" class="edit">Editar Endereço</a>
-
-    </div>
-
-
 </body>
+
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script src="./user_adress.js ">
+</script>
