@@ -1,0 +1,58 @@
+html{
+    margin: 0%;
+}
+
+input{
+    width: 367px;
+    height: 24px;
+    
+}
+
+button{
+    position: absolute;
+    margin-left: 337px;
+    margin-bottom: 31px;
+    font-size: 30px;
+
+    width: 161px;
+    height: 64px;
+    background-color: #5B2434;
+    color: white;
+}
+
+.col1{
+    margin-left: 20vh;
+    margin-top: 194px;
+    width: 557px;
+}
+
+.line{
+    position: absolute;
+    margin-left: 100vh;
+    margin-top: 194px;  
+    border-left: 1px solid #4E4747;
+    height: 50vw;
+
+}
+
+.col2{
+    margin-left: 120vh;
+    margin-top: 194px;
+    width: 557px;
+}
+
+.p1{
+    color: #4E4747;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.p2{
+    color: #4E4747;
+    font-weight: bold;
+    font-size: 24px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+
+}
