@@ -105,3 +105,33 @@
     top: 202px;
 
 }
+
+.button3{
+    position: absolute;
+    background-color: #DCDCDC;
+    font-size: 20px;
+    height: 34px;
+    width: 127px;
+    top: 206px;
+    border-style: hidden;
+    color: #4E4747;
+}
+
+.button3-clicked{
+    background-color: #F1F1F1;
+    position: absolute;
+    font-size: 20px;
+    height: 34px;
+    width: 127px;
+    top: 206px;
+    border-style: hidden;
+    color: #4E4747;
+}
+
+.stock{
+    position: relative;
+    color: #4E4747;
+    left: 5px;
+    top: 229px;
+    font-size: 16px;
+}
