@@ -7,28 +7,28 @@ var app = new Vue({
     data: {
         glasses: {
             glass1: {
-                type: "Aviator",
+                type: "Escuro",
                 model: "Aviator x-10",
                 price: "R$ 3,50",
                 style: "",
                 img: "../images/1-removebg-preview.png",
             },
             glass2: {
-                type: "hello",
+                type: "Grau",
                 model: "Quadrado surf",
                 price: "R$ 10,50",
                 style: "",
                 img: "../images/2-removebg-preview.png",
             },
             glass3: {
-                type: "hello",
+                type: "Grau",
                 model: "Styled mix",
                 price: "R$ 4,65",
                 style: "",
                 img: "../images/3-removebg-preview.png",
             },
             glass4: {
-                type: "hello",
+                type: "Escuro",
                 model: "Retro Quadrado",
                 price: "R$ 10,58",
                 style: "",
@@ -77,6 +77,13 @@ var app = new Vue({
         }else{
             console.log('else', this.favs.length);
             this.favs.push(glass);
+        }
+    },
+    removeFav(item){
+        for (let i in this.favs){
+            if(item.model = this.favs[i].model){
+                this.favs.splice(i, 1);
+            }
         }
     }
     },

@@ -19,11 +19,14 @@
         <div v-for="item of favs" class="favs">
             <div ><h2>{{item.model}} </h2>
                 <img class="glassimg" :src="item.img" >
+
                 <h3>{{item.price}}</h3>
-                <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
+                <button onclick="window.location.href='../user/user_dados.html';">Add to Cart</button>
+                <button style="background-color: rgb(192, 192, 192);"><a href="" v-on:click="removeFav(item)">Remove</a></button>
             </div>
-            <hr>
+            
         </div>
+        <hr>
     </div>
 </div>
       
@@ -50,7 +53,7 @@
         <div class="row3">
    <a onclick="w3_open()" > <div class="colum3 fav">  </div></a>
     <a href="../user/user_dados.html"><div class="colum3 person"></div></a>
-    <a href=""><div class="colum3 cart"></div></a>
+    <a href="../cart/cart.html"><div class="colum3 cart"></div></a>
 </div>
     </div>
 </div>
@@ -71,11 +74,11 @@
 <div  class="galery"> <h1>Promoções da Galeria </h1> 
 
 <div v-for="item of glasses" class="glass">    
-<div ><h2>{{item.model}} </h2>
+<div ><h2><a href="../user/user_dados.html"> {{item.model}} </a></h2>
     <img class="glassimg" :src="item.img" >
     <h3>{{item.price}}</h3>
-    <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
-    <button v-on:click="fav(item)" >Add to Fav</button>
+    <button onclick="window.location.href='../user/user_dados.html';">add To Cart</button>
+    <button v-on:click="fav(item)" >WishList</button>
 </div>
 </div>
 
