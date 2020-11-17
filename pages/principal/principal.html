@@ -20,11 +20,14 @@
                     <div>
                         <h2>{{item.model}} </h2>
                         <img class="glassimg" :src="item.img">
+
                         <h3>{{item.price}}</h3>
-                        <button onclick="window.location.href='../user/user_data.html';">Ver mais</button>
+                        <button onclick="window.location.href='../user/user_data.html';">Add to Cart</button>
+                        <button style="background-color: rgb(192, 192, 192);"><a href="" v-on:click="removeFav(item)">Remove</a></button>
                     </div>
-                    <hr>
+
                 </div>
+                <hr>
             </div>
         </div>
 
@@ -57,7 +60,7 @@
                             <a href="../user/user_data.html">
                                 <div class="colum3 person"></div>
                             </a>
-                            <a href="">
+                            <a href="../cart/cart.html">
                                 <div class="colum3 cart"></div>
                             </a>
                         </div>
@@ -82,11 +85,11 @@
 
                 <div v-for="item of glasses" class="glass">
                     <div>
-                        <h2>{{item.model}} </h2>
+                        <h2><a href="../user/user_data.html"> {{item.model}} </a></h2>
                         <img class="glassimg" :src="item.img">
                         <h3>{{item.price}}</h3>
-                        <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
-                        <button v-on:click="fav(item)">Add to Fav</button>
+                        <button onclick="window.location.href='../user/user_data.html';">add To Cart</button>
+                        <button v-on:click="fav(item)">WishList</button>
                     </div>
                 </div>
 
