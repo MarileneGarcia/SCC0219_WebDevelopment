@@ -51,26 +51,26 @@
             <hr class="white" style="top: 96px;">
             <a href="user_address.html" class="box-p" style="left: 2px; top: 98px;">Endereço</a>
             <hr class="white" style="top: 188px;">
-            <a href="user_address.html" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
+            <a href="user_payment.html" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
         </div>
         <div class="dados">
             <p class="page-header">Meu Perfil</p>
             <p class="meus-dados">Meus Dados</p>
             <hr class="black">
             <form @submit="checagem" method="post">
-                <label for="endereco" class="nome" style="top: 375px;">Endereço:</label>
-                <input v-model="endereco" required type="text" class="info" style="top: 375px;" type="text" id="endereco" name="endereco"><br><br>
-                <label for="numero" class="nome" style="top: 427px">Número:</label>
-                <input v-model="numero" required type="number" min="0" class=" info " style="top: 427px; " type="text " id="numero " name="numero "><br><br>
-                <label for="complemento " class="nome " style="top: 479px ">Complemento:</label>
-                <input v-model="complemento" required type="text" class="info " style="top: 479px; " type="text " id="complemento " name="complemento "><br><br>
-                <label for="cep " class="nome " style="top: 531px ">CEP:</label>
-                <input v-model="cep" @keyup.prevent.stop="completar" required pattern="\d{5}-\d{3}" type="text" class="info " style="top: 531px; " type="text " id="cep " name="cep "><br><br>
-                <label for="estado " class="nome " style="top: 583px ">Estado:</label>
-                <input v-model="estado" required type="text" class="info " style="top: 583px; " type="text " id="estado " name="estado "><br><br>
-                <label for="estado" class="nome " style="top: 635px ">Cidade:</label>
-                <input v-model="cidade" required type="text" class="info " style="top: 635px; " type="text " id="cidade " name="cidade "><br><br>
-                <input class="edit " style="margin-top: -100px" type="submit" value="Editar Endereço">
+                <label class="nome" style="top: 375px">Nome:</label>
+                <input v-model="nome" required class="info" style="top: 375px;" type="text" id="nome" name="nome"><br><br>
+                <label for="sobrenome" class="nome" style="top: 427px">Sobrenome:</label>
+                <input v-model="sobrenome" required class="info" style="top: 427px;" type="text" id="sobrenome" name="sobrenome"><br><br>
+                <label for="senha" class="nome" style="top: 479px">Senha:</label>
+                <input v-model="senha" required class="info" style="top: 479px;" type="password" id="senha" name="senha"><br><br>
+                <input style="margin-top: -50px" type="checkbox" @click="mostrarSenha()">Mostrar Senha
+                <label for="data" class="nome" style="top: 531px">Data de Nascimento:</label>
+                <input v-model="data" required class="info" style="top: 531px;" type="date" id="data" name="data"><br><br>
+                <label for="telefone" class="nome" style="top: 583px">Telefone para Contato:</label>
+                <input v-model="telefone" required class="info" style="top: 583px;" type="text" id="telefone" name="tel"><br><br>
+
+                <input class="edit" style="margin-top: -50px" type="submit" value="Editar Dados">
             </form>
         </div>
     </div>
@@ -78,5 +78,5 @@
 
 </html>
 <script src="https://unpkg.com/vue"></script>
-<script src="./user_address_forms.js ">
+<script src="./user_data_forms.js ">
 </script>

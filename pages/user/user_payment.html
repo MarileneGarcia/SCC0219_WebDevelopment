@@ -45,7 +45,6 @@
         <div class="sub-header" style="text-align: center;">
         </div>
 
-
         <div class="box">
             <a href="user_data.html" class="box-p" style="left: 2px;">Meus Dados</a>
             <hr class="white" style="top: 96px;">
@@ -53,29 +52,24 @@
             <hr class="white" style="top: 188px;">
             <a href="user_payment.html" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
         </div>
-
         <div class="dados">
             <p class="page-header">Meu Perfil</p>
-            <p class="meus-dados">Meus Dados</p>
+            <p class="meus-dados">Informações de Cobrança</p>
             <hr class="black">
-            <p class="nome" style="top: 375px;">Endereço:</p>
-            <p id="rua" class="info" style="top: 375px;">{{ endereco }}</p>
-            <p class="nome" style="top: 427px;">Número:</p>
-            <p id="numero" class="info" style="top: 427px;">{{ numero }}</p>
-            <p class="nome" style="top: 479px;">Complemento:</p>
-            <p id="complemento" class="info" style="top: 479px;">{{ complemento }}</p>
-            <p class="nome" style="top: 531px;">CEP:</p>
-            <p id="cep" class="info" style="top: 531px;">{{ cep }}</p>
-            <p class="nome" style="top: 583px;">Estado:</p>
-            <p id="estado" class="info" style="top: 583px;">{{ estado }}</p>
-            <p class="nome" style="top: 635px;">Cidade:</p>
-            <p id="cidade" class="info" style="top: 635px;"> {{ cidade }}</p>
-            <a href="user_address_forms.html" style="margin-top: 210px" class="edit">Editar Endereço</a>
+            <p class="nome" style="top: 375px;">Número do Cartão:</p>
+            <p class="info" style="top: 375px;">{{ cartao }}</p>
+            <p class="nome" style="top: 427px;">Titular:</p>
+            <p class="info" style="top: 427px;">{{ titular }}</p>
+            <p class="nome" style="top: 479px;">CVV:</p>
+            <p class="info" style="top: 479px;">{{ cvv }}</p>
+            <p class="nome" style="top: 531px;">Vencimento:</p>
+            <p class="info" style="top: 531px; ">{{ data }}</p>
+
+            <a href="user_payment_forms.html" class="edit" style="margin-top: 110px">Editar Dados</a>
+
         </div>
     </div>
 </body>
-
-</html>
 <script src="https://unpkg.com/vue"></script>
-<script src="./user_address.js ">
+<script src="./user_payment.js">
 </script>

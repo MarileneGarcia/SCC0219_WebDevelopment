@@ -53,29 +53,27 @@
             <hr class="white" style="top: 188px;">
             <a href="user_payment.html" class="box-p" style="left: 2px; top: 186px;">Cobrança</a>
         </div>
-
         <div class="dados">
             <p class="page-header">Meu Perfil</p>
             <p class="meus-dados">Meus Dados</p>
             <hr class="black">
-            <p class="nome" style="top: 375px;">Endereço:</p>
-            <p id="rua" class="info" style="top: 375px;">{{ endereco }}</p>
-            <p class="nome" style="top: 427px;">Número:</p>
-            <p id="numero" class="info" style="top: 427px;">{{ numero }}</p>
-            <p class="nome" style="top: 479px;">Complemento:</p>
-            <p id="complemento" class="info" style="top: 479px;">{{ complemento }}</p>
-            <p class="nome" style="top: 531px;">CEP:</p>
-            <p id="cep" class="info" style="top: 531px;">{{ cep }}</p>
-            <p class="nome" style="top: 583px;">Estado:</p>
-            <p id="estado" class="info" style="top: 583px;">{{ estado }}</p>
-            <p class="nome" style="top: 635px;">Cidade:</p>
-            <p id="cidade" class="info" style="top: 635px;"> {{ cidade }}</p>
-            <a href="user_address_forms.html" style="margin-top: 210px" class="edit">Editar Endereço</a>
+            <form @submit="checagem" method="post">
+                <label for="cartao " class="nome" style="top: 375px">Número do Cartão:</label>
+                <input id="cartao" name="cartao" v-model="cartao" required class="info" style="top: 375px;" type="number"><br><br>
+                <label for="titular" class="nome" style="top: 427px">Titular:</label>
+                <input id="titular" name="titular" v-model="titular" required class="info" style="top: 427px;" type="text"><br><br>
+                <label for="cvv" class="nome" style="top: 479px">CVV:</label>
+                <input id="cvv" name="cvv" v-model="cvv" required class="info" style="top: 479px;" type="number"><br><br>
+                <label for="data" class="nome" style="top: 531px">Vencimento:</label>
+                <input id="data" name="data" v-model="data" required class="info" style="top: 531px;" type="date"><br><br>
+
+                <input class="edit" style="margin-top: -50px" type="submit" value="Editar Dados">
+            </form>
         </div>
     </div>
 </body>
 
 </html>
 <script src="https://unpkg.com/vue"></script>
-<script src="./user_address.js ">
+<script src="./user_payment_forms.js ">
 </script>

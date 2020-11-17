@@ -24,10 +24,11 @@ var app = new Vue({
                     });
             }
         },
-        checagem: function(endereco, numero, complemento, cep, estado, cidade) {
+        checagem: function(e) {
             if (this.endereco && this.numero && this.complemento && this.cep && this.estado && this.cidade) {
                 // enviar para o banco de dados //
                 alert("Formulário submetido com sucesso");
+                window.open("user_address.html", "_self");
             } else {
                 alert("Por favor, preencher todos os campos");
             }

@@ -1,25 +1,25 @@
-html{
-    margin: 0%;
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-div.dados{
+div.dados {
     color: #4E4747;
     position: absolute;
-
+    left: 334px;
+    top: 350px;
 }
 
-div.box{
+div.box {
     position: absolute;
     width: 267px;
     height: 289px;
     left: 29px;
-    top: 350px;
-    
+    top: 405px;
     background: #5B2434;
     color: white;
 }
 
-.box-p{
+.box-p {
     text-decoration: none;
     color: white;
     margin-top: 30px;
@@ -32,75 +32,193 @@ div.box{
     text-align: center;
 }
 
-hr.white{
+hr.white {
     position: absolute;
     width: 265px;
     height: 1px;
     color: white;
     background-color: white;
-
 }
 
-p.page-header{
+p.page-header {
     font-size: 46px;
     font-weight: bold;
     position: relative;
-    top: 130px;
-    left: 334px;
+    top: -150px;
+    left: 0px;
 }
 
-p.meus-dados{
-    font-size: 30px; 
+p.meus-dados {
+    font-size: 30px;
     font-weight: bold;
     position: relative;
-    top: 141px;
-    left: 334px;
+    display: inline-block;
+    top: -200px;
+    left: 5px;
 }
 
-hr.black{
+hr.black {
     position: absolute;
     margin-top: 0px;
     margin-bottom: 0px;
+    display: inline-block;
     width: 918px;
     height: 0px;
-    left: 334px;
-    top: 350px;
+    top: 15px;
+    left: 5px;
     background-color: #4E4747;
-    
     border: 1px solid #4E4747;
 }
 
-.nome{
+.nome {
     position: absolute;
-    margin-top: 32px;
-    width: 301px;
-    left: 334px;
+    margin-top: -325px;
+    width: 330px;
+    left: 5px;
     font-size: 24px;
     font-style: normal;
-    font-weight: bold; 
+    font-weight: bold;
+    display: inline-block;
 }
 
-.info{
+.info {
     position: absolute;
-    margin-top: 32px;
-    width: 301px;
-    left: 697px;
+    margin-top: -325px;
+    width: 330px;
+    left: 339px;
     font-size: 24px;
     font-style: normal;
-    color: black; 
+    color: black;
+    display: inline-block;
 }
 
-.edit{
+.edit {
     text-decoration: underline;
-    color: #4E4747  ;
+    color: #4E4747;
     position: absolute;
-    width: 100%;
+    width: 240px;
     height: 33px;
-    left: 1086px;
-    top: 682px;
-    
+    left: 690px;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 34px;
+}
+
+.forms {
+    position: absolute;
+    margin-top: -213px;
+    width: 0px;
+    left: 0px;
+}
+
+div.header {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    background-color: #F1F1F1;
+}
+
+div.sub-header {
+    position: fixed;
+    top: 120px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: #DCDCDC;
+}
+
+div.slider {
+    width: 100%;
+    height: 80vh;
+    background: url("https://wallpapercave.com/wp/wp2366361.jpg");
+    background-size: cover;
+}
+
+.headera {
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 1vw;
+    font-size: 0.9vw;
+    font-weight: bold;
+}
+
+.headera:hover {
+    background-color: #f3bc46;
+    color: white;
+    transition: border-radius 500ms, color 1s, background-color 0.3s;
+}
+
+.block {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0);
+    min-width: 30vw;
+    max-width: 30vw;
+    height: 10vh;
+    border-width: 1px;
+    text-align: left;
+}
+
+.searchbar {
+    background: url('https://www.flaticon.com/svg/static/icons/svg/56/56936.svg') no-repeat scroll 2vw 2vw;
+    background-size: 1.3vw;
+    background-position: 27vw;
+    background-color: white;
+    vertical-align: middle;
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+    padding-left: 0.7vw;
+    font-size: 15px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.row3 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-left: 4vw;
+}
+
+.fav {
+    background: url('https://www.flaticon.com/svg/static/icons/svg/25/25424.svg') no-repeat scroll 2px 2px;
+    background-size: 1.5vw;
+    background-color: rgba(255, 255, 255, 0);
+    vertical-align: middle;
+    background-position: center;
+}
+
+.person {
+    background: url('https://www.flaticon.com/svg/static/icons/svg/54/54647.svg') no-repeat scroll 2px 2px;
+    background-size: 1.5vw;
+    background-color: rgba(255, 255, 255, 0);
+    vertical-align: middle;
+    background-position: center;
+}
+
+.cart {
+    background: url('https://www.flaticon.com/svg/static/icons/svg/34/34568.svg') no-repeat scroll 2px 2px;
+    background-size: 1.5vw;
+    background-color: rgba(255, 255, 255, 0);
+    vertical-align: middle;
+    background-position: center;
+}
+
+.colum3 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3vw;
+    height: 3vw;
+    margin-top: 5vh;
+    margin-left: 4vw;
+}
+
+.colum3:hover {
+    background-color: #f3bc46;
+    transition: border-radius 500ms, color 1s, background-color 0.5s;
 }
