@@ -11,35 +11,40 @@
 
 
 <body>
-
+    <div id="app">
     <div class="col1" style="position: absolute;">
+        <form @submit="checagem_cadastro" method="post">
         <button style="margin-top: 50vw;">Criar</button>
         <p class="p1">Novo usuário</p>
         <p class="p2" style="margin-top: 68px;">Nome:</p>
-        <input>
+        <input v-model="nome" required>
         <p class="p2" style="margin-top: 68px;">Sobrenome:</p>
-        <input>
+        <input v-model="sobrenome" required>
         <p class="p2" style="margin-top: 68px;">E-mail:</p>
-        <input>
+        <input v-model="email" required>
         <p class="p2" style="margin-top: 68px;">Senha:</p>
-        <input>
+        <input v-model="senha" required type="password">
         <p class="p2" style="margin-top: 68px;">Confirmar Senha:</p>
-        <input>
-        
+        <input v-model="confirmar_senha" required type="password">
+        </form>
     </div>
 
 
 
     <div class="line"></div>
 
+    <form @submit="checagem_login" method="post">
     <div class="col2" style="position: absolute;">
-        <button style="margin-top: 25vw;" onclick="user_page()">Entrar</button>
+        <button style="margin-top: 25vw;">Entrar</button>
         <p class="p1">Usuário Existente</p>
         <p class="p2" style="margin-top: 68px;">E-mail:</p>
-        <input>
+        <input v-model="email" required>
         <p class="p2" style="margin-top: 68px;">Senha:</p>
-        <input>
+        <input v-model="senha" required type="password" >
     </div>
+    </form>
+    </div>
+
 
         <div  class="header" style="position: fixed;">
     <div  class="header" style="text-align: center;"> 
@@ -58,7 +63,7 @@
         <div class="block">
             <div class="row3">
         <a href=""><div class="colum3 fav"></div></a>
-        <a href="../user/user_dados.html"><div class="colum3 person"></div></a>
+        <a href="../login/login.html"><div class="colum3 person"></div></a>
         <a href=""><div class="colum3 cart"></div></a>
     </div>
     
@@ -73,11 +78,10 @@
     </div>
     
     </div>
-
-
-</body>
-</html>
 <script src="https://unpkg.com/vue"></script>
 <script  src="login.js">
 </script>
+
+</body>
+</html>
 
