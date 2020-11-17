@@ -10,20 +10,34 @@
 
 <body>
 
-
-    <div class="blockk" style="left:48px;">
-
-    </div>
-
-    <div class="blockk" style="left:522px;">
-
-    </div>
-
-    <div class="blockk" style="left:995px;">
-
-    </div>
-
     <p class="name">Óculos de Sol nº 2</p>
+    <div id="app">
+            
+        <div id="left block" class="block1" style="left:48px;">
+
+        </div>
+
+        <div id="mid block" class="block1" style="left:522px;">
+            <div id="circle1" class="circle" v-on:click="change_img('../images/11-removebg-preview.png')">    <img class="small-image" src="../images/11-removebg-preview.png" alt="oculos">    </div>
+            <div id="circle2" class="circle" v-on:click="change_img('../images/1-removebg-preview.png')">    <img class="small-image" src="../images/1-removebg-preview.png" alt="oculos" >    </div>
+            <div id="circle3" class="circle" v-on:click="change_img('../images/13-removebg-preview.png')">    <img class="small-image" src="../images/13-removebg-preview.png" alt="oculos" >   </div>
+            <img id="img" class="big-image" src="../images/11-removebg-preview.png" alt="oculos">
+        </div>
+
+        <div id="right block" class="block1" style="left:995px;">
+            <p class="price">R$ 500,00</p>
+            <p class="sub-price">ou até 12x de R$42,00</p>
+            <p class="qtd">quantidade:<input type="number" min="1" max="15" style="margin-left: 8px;"></p>  
+            <button class="button1">Adicionar ao Carrinho</button>
+            <button class="button2">Lista de Desejos</button>
+            <p>Quantidade em estoque:15</p>
+            
+
+        </div>
+
+    </div>
+
+
     <div  class="header" style="position: fixed;">
         <div  class="header" style="text-align: center;"> 
             <div class="block"><a href=""> <img style="height: 100%; width: auto;" src="../images/logo_borderless.png"> </div></a>

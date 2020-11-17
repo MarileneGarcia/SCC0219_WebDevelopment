@@ -1,9 +1,28 @@
-.blockk{
+.block1{
     position:absolute;
     width: 458px;
     height: 550px;
     background-color: #F1F1F1;
     top: 240px;
+    margin-bottom: 50px;
+}
+
+.circle{
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: #DCDCDC;
+}
+
+.circle:hover{
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: rgb(126, 126, 126);
 }
 
 .name{
@@ -12,4 +31,77 @@
     font-weight:bold;
     top:120px;
     left:568px;
+    color: #515151;
+}
+
+.big-image{
+    position: relative;
+    left: 69px;
+    top: 23px;
+    max-width: 320px;
+    width: auto;
+    height: auto;
+
+}
+
+.small-image{
+    position: relative;
+    top: 20px;
+    left: 7px;
+    max-width:50px;
+    width: auto;
+    height: auto;
+}
+
+.price{
+    position: relative;
+    text-align: right;
+    right: 8px;
+    font-weight: bold;
+    font-size: 45px;
+    color: #515151;
+    margin: 0%;
+}
+
+.sub-price{
+    position: relative;
+    text-align: right;
+    right: 8px;
+    margin: 0%;
+    font-size: 25px;
+    color: #515151;
+}
+
+.qtd{
+    position: relative;
+    top: 112px;
+    left: 13px;
+    color: #515151;
+    margin: 0%;
+    font-size: 25px;
+}
+
+.button1{
+    color: white;
+    background-color: #5B2434;
+    width: 378px;
+    height: 57px;
+    left: 40px;
+    font-size: 35px;
+    position: relative;
+    top: 202px;
+
+}
+
+.button2{
+    color: white;
+    background-color: #5B2434;
+    width: 231px;
+    height: 45px;
+    left: 199px;
+    margin-top: 49px;
+    font-size: 26px;
+    position: relative;
+    top: 202px;
+
 }

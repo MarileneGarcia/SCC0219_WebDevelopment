@@ -35,7 +35,7 @@ remove_button.addEventListener("click",function(event){
     }
 });
 
-var app = new Vue({
+/*var app = new Vue({
     el: "#app",
     data: {
         glasses: {
@@ -80,4 +80,4 @@ var app = new Vue({
             this.glass1.type;
         }
     }
-});
+});*/
