@@ -5,7 +5,7 @@ window.onload = (event) => {
 var app = new Vue({
     el: "#app",
     data: {
-        sub_total:0.7,
+        sub_total:0,
         cart: [
              {
                 type: "Escuro",
@@ -83,17 +83,17 @@ var app = new Vue({
         console.log(this.prices)
         this.sub_total = this.sub_total+this.prices[j].price;
     }
-}
+},
+
+
     },
    
 });
 
 function w3_open() {
-  //  document.getElementById("main").style.marginLeft = "25%";
-  //document.getElementById("mySidebar").style.width = "right:0";
-    //document.getElementById("mySidebar").style.width = "25%";
+  ;
     document.getElementById("mySidebar").style.display = "block";
-   // document.getElementById("openNav").style.display = 'none';
+   
   }
   function w3_close() {
     console.log('close');

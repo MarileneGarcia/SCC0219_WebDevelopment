@@ -53,6 +53,9 @@ var app = new Vue({
        
     },
     methods: {
+        addCart(){
+            window.alert("Item adicionado ao Carrinho");
+        },
         helo() {
             console.log(this.glasses);
         },
@@ -75,7 +78,7 @@ var app = new Vue({
            }
             console.log(this.favs);
         }else{
-            console.log('else', this.favs.length);
+            window.alert("adicionado aos favoritos");
             this.favs.push(glass);
         }
     },

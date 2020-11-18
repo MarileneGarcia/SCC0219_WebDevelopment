@@ -13,7 +13,23 @@
 <body>
     <div id="app">
       
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" style="display:none; width:25%; background-color: rgb(223, 223, 223);">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+            <div>
+                <div v-for="item of favs" class="favs">
+                    <div>
+                        <h2>{{item.model}} </h2>
+                        <img class="glassimg" :src="item.img">
 
+                        <h3>{{item.price}}</h3>
+                        <button onclick="window.location.href='../user/user_data.html';">Add to Cart</button>
+                        <button style="background-color: rgb(192, 192, 192);"><a href="" v-on:click="removeFav(item)">Remove</a></button>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </div>
 
 
     
@@ -57,13 +73,20 @@
    
     <div v-for="item in cart" class="glassCart" >
         <div style="display: inline-block; width: 70%;" >
-        <div style="display: inline-block;"> <input id="amount" name="amount" v-on:click="price(item)" name="amount" type="checkbox"> </div>
+        <div style="display: inline-block;"> <input  v-on:click="price(item)" type="checkbox"> </div>
         <div style="display: inline-block;"> <img class="glassimg" :src="item.img" ></div>
         <div style="display: inline-block; vertical-align: middle; "> <div style="display: inline-block;"> <h2>{{item.type}}</h2></div>
          <div style="display: inline-block;" ><h3>{{item.model}}</h3> </div>
             <div style="margin-top: 0;"> 
                <div style="display: inline-block;"> <h3 style="margin-top: 0;">quantidade</h3> </div>
-               <div style="display: inline-block;">  <input id="amount" style="width: 45px; text-align: center;" type="number">  </div>
+               <div style="display: inline-block;">  
+                <select style="width: 50px;">
+                    <option value=””>1</option>
+                    <option value=””>2</option>
+                    <option value=””>3</option>
+                    <option value=””>4</option>
+                    </select>
+                </div>
             </div>
             </div>
         <hr>
@@ -79,8 +102,29 @@
 
 
 <div class="checkout">
-    <div style="margin: 0 auto; width: 100%; background-color: rgb(223, 223, 223); height: 60px;" >
+    <div style="margin: 0 auto; width: 100%; background-color: rgb(223, 223, 223); height: 120px;" >
         <div ><h2 style="margin: 0;">Subtotal <span style="color: black;"> R${{sub_total}} </span></h2></div>
+        <div><button style="width: 60%; height: 40px; margin-top: 10px;" >Fechar pedido</button></div>
+    </div>
+    <div style="margin: 0 auto; width: 100%; margin-top: 40px; " >
+        <div ><h2 style="margin: 0;">Formas de Pagamento</h2></div>
+        <div style="width: 60%;  margin:0 auto;" id="paypal-button-container" ></div>
+        <div style="margin-top: 80px;">
+            <div  style="display: inline-block; margin-right: 85px; "> 
+                <select style="width: 50px;">
+                <option value=””>1</option>
+                <option value=””>2</option>
+                <option value=””>3</option>
+                <option value=””>4</option>
+                </select>
+            </div> 
+            <div style="display: inline-block; margin-left: 85px;"> <span style="color: black;"> R${{sub_total}} </span></div>
+        </div>
+        <div style="width: 100%; text-align: left; margin-left: 63px; margin-top: 80px;" >
+            <div style="display: inline-block;">Endereço:</div>
+            <div style="display: inline-block;"><input style="border: 0; border-bottom: 2px; border-style: solid; width: 120%;" type="text"></div>
+        </div> 
+    
     </div>
 </div>
 
@@ -102,4 +146,6 @@
 <script src="https://unpkg.com/vue"></script>
 <script  src="./cart.js">
 </script>
+<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+<script>paypal.Buttons().render('#paypal-button-container');</script>
 
