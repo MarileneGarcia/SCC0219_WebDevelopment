@@ -239,6 +239,7 @@ button:hover{
 }
 
 .checkout {
+    text-align: center;
     margin-top: 15px;
     display: inline-block;
     width: 30%; 
