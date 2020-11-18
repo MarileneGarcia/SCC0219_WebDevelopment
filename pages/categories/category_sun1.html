@@ -14,10 +14,30 @@
 <body>
     <div id="app">
 
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" id="mySidebar" style="display:none; width:25%; background-color: rgb(223, 223, 223);">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+            <div>
+                <div v-for="item of favs" class="favs">
+                    <div>
+                        <h2>{{item.model}} </h2>
+                        <img class="glassimg" :src="item.img">
+
+                        <h3>{{item.price}}</h3>
+                        <button onclick="window.location.href='../user/user_data.html';">Add to Cart</button>
+                        <button style="background-color: rgb(192, 192, 192);"><a href="" v-on:click="removeFav(item)">Remove</a></button>
+                    </div>
+
+                </div>
+                <hr>
+            </div>
+        </div>
+
+
+
         <div class="header">
             <div class="header" style="text-align: center;">
                 <div class="block">
-                    <a href=""> <img style="height: 100%; width: auto;" src="../images/logo_borderless.png"> </div>
+                    <a href="../principal/principal.html"> <img style="height: 100%; width: auto;" src="../images/logo_borderless.png"> </div>
                 </a>
 
                 <div class="block">
@@ -27,20 +47,19 @@
                         <li><a class="headera" href="category_eyeglasses1.html">ÓCULOS DE GRAU</a></li>
                         <li><a class="headera" href="category_everyglass1.html">EVERGLASSES</a></li>
                     </ul>
+
+
                 </div>
 
-
-
                 <div class="block">
-
                     <div class="row3">
                         <a onclick="w3_open()">
                             <div class="colum3 fav"> </div>
                         </a>
-                        <a href="../user/user_data.html">
+                        <a href="../user/user_dados.html">
                             <div class="colum3 person"></div>
                         </a>
-                        <a href="">
+                        <a href="../cart/cart.html">
                             <div class="colum3 cart"></div>
                         </a>
                     </div>
@@ -50,44 +69,40 @@
         <div class="sub-header" style="text-align: center;">
         </div>
 
+        <div style="width: 100%; height: 80vw; display: inline-block; padding-left: 30px;">
 
 
+            <div class="galery">
+                <ul id="mid block" class="block1" style="left:522px;">
+                    <a href="category_sun1.html">
+                        <div id="circle1" class="circle" style="border: 4px solid #4E4747; box-sizing: border-box;"> <img style="margin-top: 4px;" src="https://www.flaticon.com/svg/static/icons/svg/483/483675.svg" class="small-image" alt="icon"> </div>
+                    </a>
+                    <a href="category_sun2.html">
+                        <div id="circle2" class="circle"> <img style="margin-top: 7px;" src="https://www.flaticon.com/svg/static/icons/svg/660/660385.svg" class="small-image" alt="icon"> </div>
+                    </a>
 
-        <div class="slidown" style="text-align: center; font-weight: bold; color: rgb(66, 66, 66);">
-        </div>
+                    <a href="category_sun3.html">
+                        <div id="circle3" class="circle"> <img class="small-image" alt="icon" style="margin-top: 8px;" src="https://www.flaticon.com/svg/static/icons/svg/785/785687.svg"> </div>
+                    </a>
+                </ul>
+                <ul id="mid block" class="block2" style="left:522px;">
+                    <u>MAIS VENDIDOS</u> ESSENCIAIS PREMIUN
+                </ul>
 
-
-        <div class="galery">
-            <ul id="mid block" class="block1" style="left:522px;">
-                <a href="category_sun1.html">
-                    <div id="circle1" class="circle" style="border: 4px solid #4E4747; box-sizing: border-box;"> <img style="margin-top: 4px;" src="https://www.flaticon.com/svg/static/icons/svg/483/483675.svg" class="small-image" alt="icon"> </div>
-                </a>
-                <a href="category_sun2.html">
-                    <div id="circle2" class="circle"> <img style="margin-top: 7px;" src="https://www.flaticon.com/svg/static/icons/svg/660/660385.svg" class="small-image" alt="icon"> </div>
-                </a>
-
-                <a href="category_sun3.html">
-                    <div id="circle3" class="circle"> <img class="small-image" alt="icon" style="margin-top: 7px;" src="https://www.flaticon.com/svg/static/icons/svg/25/25251.svg"> </div>
-                </a>
-            </ul>
-            <ul id="mid block" class="block2" style="left:522px;">
-                <u>MAIS VENDIDOS</u> ESSENCIAIS PREMIUN
-            </ul>
-
-            <div v-for="item of glasses" class="glass">
-                <div>
-                    <h2>{{item.model}} </h2>
-                    <img class="glassimg" :src="item.img">
-                    <h3>{{item.price}}</h3>
-                    <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
-                    <button v-on:click="fav(item)">Add to Fav</button>
+                <div v-for="item of glasses" class="glass">
+                    <div>
+                        <h2>{{item.model}} </h2>
+                        <img class="glassimg" :src="item.img">
+                        <h3>{{item.price}}</h3>
+                        <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
+                        <button v-on:click="fav(item)">Add to Fav</button>
+                    </div>
                 </div>
+
+
             </div>
-
-
+            <div class="footer">desenvolvido por: Marilene Garcia, Bruno Helou, Rafael Pinho</div>
         </div>
-        <div class="footer">desenvolvido por: Marilene Garcia, Bruno Helou, Rafael Pinho</div>
-    </div>
 </body>
 
 </html>
