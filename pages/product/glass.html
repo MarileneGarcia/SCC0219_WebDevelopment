@@ -4,14 +4,17 @@
 <head>
     <link href="../header/header.css" rel="stylesheet">
     <link href="glass.css" rel="stylesheet">
-    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta  name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
     <title>017 Glass Store</title>
 </head>
 
 <body>
 
-    <p class="name">Óculos de Sol nº 2</p>
+
     <div id="app">
+
+        <p class="name">Óculos de Sol nº 2</p>
         <button id="detalhes" class="button3-clicked" v-on:click="change_text('DETALHES')" style="left: 48px;" >DETALHES</button>
         <button id="armacao" class="button3" v-on:click="change_text('ARMAÇÃO')" style="left: 179px;">ARMAÇÃO</button>
         <button id="tamanho" class="button3" v-on:click="change_text('TAMANHO')" style="left: 310px;">TAMANHO</button>    
@@ -52,9 +55,9 @@
         
             <div  class="block">
             <div class="colum2"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
-            <a class="headera" href="">ÓCULOS DE SOL</a>
-            <a class="headera"  href="">ÓCULOS DE GRAU</a>
-            <a class="headera"  href="">EVERGLASSES</a>
+            <a class="headera" href="../categories/category_sun1.html">ÓCULOS DE SOL</a>
+            <a class="headera"  href="../categories/category_eyeglasses1.html">ÓCULOS DE GRAU</a>
+            <a class="headera"  href="../categories/category_everyglass1.html">EVERGLASSES</a>
             
         
         
@@ -79,6 +82,8 @@
         
         </div>
     
+        
+
     <script src="https://unpkg.com/vue"></script>
     <script src="glass.js"></script>
     

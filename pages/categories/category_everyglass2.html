@@ -19,7 +19,7 @@
                 <div v-for="item of favs" class="favs">
                     <div>
                         <h2>{{item.model}} </h2>
-                        <img class="glassimg" :src="item.img">
+                        <a href="../product/glass.html"><img class="glassimg" :src="item.img"></a>
 
                         <h3>{{item.price}}</h3>
                         <button onclick="window.location.href='../user/user_data.html';">Add to Cart</button>
