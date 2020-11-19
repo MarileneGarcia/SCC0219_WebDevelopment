@@ -1,3 +1,4 @@
+//banco de dados vai implementar essa parte
 var login = false;
 
 var app = new Vue({
