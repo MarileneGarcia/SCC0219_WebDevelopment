@@ -46,9 +46,9 @@
                     <div class="block">
                         <div style="text-align: center;"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
                         <ul style="padding-left: 0; margin-top: 0;" id="menu">
-                            <li><a class="headera" href="">ÓCULOS DE SOL</a></li>
-                            <li><a class="headera" href="">ÓCULOS DE GRAU</a></li>
-                            <li><a class="headera" href="">EVERGLASSES</a></li>
+                            <li><a class="headera" href="../categories/category_sun1.html">ÓCULOS DE SOL</a></li>
+                            <li><a class="headera" href="../categories/category_eyeglasses1.html">ÓCULOS DE GRAU</a></li>
+                            <li><a class="headera" href="../categories/category_everyglass1.html">EVERGLASSES</a></li>
                         </ul>
 
 
@@ -87,8 +87,8 @@
 
                 <div v-for="item of glasses" class="glass">
                     <div>
-                        <h2><a href="../user/user_data.html"> {{item.model}} </a></h2>
-                        <img class="glassimg" :src="item.img">
+                        <h2><a href="../product/glass.html"> {{item.model}} </a></h2>
+                        <a href="../product/glass.html"><img class="glassimg" :src="item.img"></a>
                         <h3>{{item.price}}</h3>
                         <button v-on:click="addCart()">add To Cart</button>
                         <button v-on:click="fav(item)">WishList</button>

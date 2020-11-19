@@ -90,7 +90,7 @@
                 <div v-for="item of glasses" class="glass">
                     <div>
                         <h2>{{item.model}} </h2>
-                        <img class="glassimg" :src="item.img">
+                        <a href="../product/glass.html"><img class="glassimg" :src="item.img"></a>
                         <h3>{{item.price}}</h3>
                         <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
                         <button v-on:click="fav(item)">Add to Fav</button>
