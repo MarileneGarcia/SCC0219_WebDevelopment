@@ -53,7 +53,7 @@ app.use(function(err, req, res, next) {
 
 // replace the uri string with your connection string.
 
-const uri = "mongodb+srv://adele:jSJ9V8okBvF3kFFu@cluster017.mz88j.mongodb.net/test?retryWrites=true;";
+const uri = "mongodb+srv://[USER(REMOVE'[]')]:[PASSWORD]@cluster017.mz88j.mongodb.net/test?retryWrites=true;";
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
