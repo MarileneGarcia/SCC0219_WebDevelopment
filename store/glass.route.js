@@ -1,11 +1,11 @@
-// user.route.js
+// glass.route.js
 
 const router = require('express').Router();
-let User = require('./user.model');
+let Glass = require('./glass.model');
 
 router.route('/').get((req, res) => {
-    User.find()
-        .then(users => res.json(users))
+    Glass.find()
+        .then(glasses => res.json(glasses))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 

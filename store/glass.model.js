@@ -1,10 +1,10 @@
-// user.model.js
+// glass.model.js
 
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const glassSchema = new Schema({
     username: {
         type: String,
         required: true,
@@ -53,6 +53,6 @@ const userSchema = new Schema({
     timestamps: true,
 });
 
-const User = mongoose.model('User', userSchema);
+const Glass = mongoose.model('Glass', glassSchema);
 
-module.exports = User;
+module.exports = Glass;
