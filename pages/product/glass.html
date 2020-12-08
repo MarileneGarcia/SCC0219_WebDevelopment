@@ -4,14 +4,17 @@
 <head>
     <link href="../header/header.css" rel="stylesheet">
     <link href="glass.css" rel="stylesheet">
-    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta  name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
     <title>017 Glass Store</title>
 </head>
 
 <body>
 
-    <p class="name">Óculos de Sol nº 2</p>
+
     <div id="app">
+
+        <p class="name">Óculos de Sol nº 2</p>
         <button id="detalhes" class="button3-clicked" v-on:click="change_text('DETALHES')" style="left: 48px;" >DETALHES</button>
         <button id="armacao" class="button3" v-on:click="change_text('ARMAÇÃO')" style="left: 179px;">ARMAÇÃO</button>
         <button id="tamanho" class="button3" v-on:click="change_text('TAMANHO')" style="left: 310px;">TAMANHO</button>    
@@ -36,7 +39,7 @@
             <p class="price">R$ 500,00</p>
             <p class="sub-price">ou até 12x de R$42,00</p>
             <p class="qtd">quantidade:<input type="number" min="1" max="15" style="margin-left: 8px;"></p>  
-            <button class="button1">Adicionar ao Carrinho</button>
+            <a href="../cart/cart.html"><button  class="button1">Adicionar ao Carrinho</button></a>
             <button class="button2">Lista de Desejos</button>
             <p class="stock">Quantidade em estoque:15</p>
             
@@ -48,13 +51,13 @@
 
     <div  class="header" style="position: fixed;">
         <div  class="header" style="text-align: center;"> 
-            <div class="block"><a href=""> <img style="height: 100%; width: auto;" src="../images/logo_borderless.png"> </div></a>
+            <div class="block"><a href="../principal/principal.html"> <img style="height: 100%; width: auto;" src="../images/logo_borderless.png"> </div></a>
         
             <div  class="block">
             <div class="colum2"> <input class="searchbar" type="search" placeholder="best glasses in the world"></div>
-            <a class="headera" href="">ÓCULOS DE SOL</a>
-            <a class="headera"  href="">ÓCULOS DE GRAU</a>
-            <a class="headera"  href="">EVERGLASSES</a>
+            <a class="headera" href="../categories/category_sun1.html">ÓCULOS DE SOL</a>
+            <a class="headera"  href="../categories/category_eyeglasses1.html">ÓCULOS DE GRAU</a>
+            <a class="headera"  href="../categories/category_everyglass1.html">EVERGLASSES</a>
             
         
         
@@ -63,8 +66,8 @@
             <div class="block">
                 <div class="row3">
             <a href=""><div class="colum3 fav"></div></a>
-            <a href="../user/user_dados.html"><div class="colum3 person"></div></a>
-            <a href=""><div class="colum3 cart"></div></a>
+            <a href="../login/login.html"><div class="colum3 person"></div></a>
+            <a href="../cart/cart.html"><div class="colum3 cart"></div></a>
         </div>
         
         
@@ -79,6 +82,8 @@
         
         </div>
     
+        
+
     <script src="https://unpkg.com/vue"></script>
     <script src="glass.js"></script>
     

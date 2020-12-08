@@ -29,23 +29,23 @@ var app = new Vue({
             glass4: {
                 type: "hello",
                 model: "Retro Quadrado",
-                price: "R$ 10,58",
+                price: "R$ 9,52",
                 style: "",
                 img: "../images/4-removebg-preview.png",
             },
             glass5: {
                 type: "hello",
-                model: "Retro Quadrado",
-                price: "R$ 10,58",
+                model: "Retro Circular",
+                price: "R$ 10,00",
                 style: "",
-                img: "../images/4-removebg-preview.png",
+                img: "../images/5-removebg-preview.png",
             },
             glass6: {
                 type: "hello",
-                model: "Retro Quadrado",
-                price: "R$ 10,58",
+                model: "Quadrado Y-4",
+                price: "R$ 5,56",
                 style: "",
-                img: "../images/4-removebg-preview.png",
+                img: "../images/6-removebg-preview.png",
             },
         },
         favs: []
@@ -96,8 +96,3 @@ function w3_close() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("openNav").style.display = "inline-block";
 }
-
-function glass_open() {
-    window.open("category_sun.html", "_self");
-}
-//
