@@ -5,48 +5,38 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const glassSchema = new Schema({
-    username: {
+    code: {
         type: String,
-        required: true,
         unique: true,
         trim: true,
         minlength: 3
     },
-    password: {
-        type: String,
-        required:true,
-        minlength:8,
-        trim:true
-
-    },
-    address:{
-        type: String,
-        required:true,
-    },
-    cart: {
-        type: [String],
-        
-    },
-    fav:{
-        type: [String],
-    },
-    card_number:{
+    price: {
         type: Number,
-        minlength:16,
-        maxlength:16,
-        required: true,
+        required:true,
 
     },
-    cvv:{
-        type:Number,
-        minlength:3,
-        maxlength:3,
+    alias:{
+        type:String,
+        required:true,
+    },
+    details:{
+        type:String,
+        required:true,
+    },
+    format:{
+        type: String,
+        required:true
+    },
+    tipo:{
+        type:String,
+        required:true
+    },
+    img:{
+        type:String, 
         required: true,
     },
-    card_date:{
-        type: Date,
-        required: true,
-    }
+   
 
 
 }, {

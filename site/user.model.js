@@ -46,7 +46,7 @@ const userSchema = new Schema({
     card_date:{
         type: Date,
         required: true,
-    }
+    },
 
 
 }, {

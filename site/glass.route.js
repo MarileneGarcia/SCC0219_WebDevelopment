@@ -2,6 +2,22 @@
 
 const router = require('express').Router();
 let Glass = require('./glass.model');
+const multer= require('multer');
+
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './public/images');
+    },
+    filename: function(req, file, cb ) {
+        cb(null,  file.originalname);
+    }
+    
+});
+const upload = multer({storage: storage});
+
+
+
 
 router.route('/').get((req, res) => {
     Glass.find()
@@ -9,57 +25,42 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req, res) => {
-    console.log(req.body);
-    const username = req.body.username;
-    const password= req.body.password;
-    const address = req.body.address;
-    const cart = req.body.cart;
-    const card_number = req.body.card_number;
-    const cvv = req.body.cvv;
-    const card_date = req.body.card_date;
-    const newUser = new User({ username, password, address, cart, card_number, cvv, card_date });
+router.post('/add',upload.single('img') , (req, res) => {
+    console.log(req.file);
+  
+    const code = req.body.code;
+    const price = req.body.price;
+    const alias = req.body.alias;
+    const details = req.body.details;
+    const format = req.body.format;
+    const tipo = req.body.tipo;
+    const img  =  req.file.filename;
+    console.log('was here');
+    const newGlass = new Glass({code, price, alias, details, format, tipo, img});
+    console.log(newGlass);
+    newGlass.save().then(()=>{
+        res.json('glass added');
+    }).catch( err =>{
+        res.json(err)
+    });
 
-    newUser.save()
-        .then(() => res.json('User added!'))
-        .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/:id').get((req, res) => {
-    User.findById(req.params.id)
+    Glass.findById(req.params.id)
         .then(exercise => res.json(exercise))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/:id').delete((req, res) => {
-    User.findByIdAndDelete(req.params.id)
-        .then(() => res.json('User deleted.'))
+    Glass.findByIdAndDelete(req.params.id)
+        .then(() => res.json('glass deleted.'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/cart/:id').put((req, res) => {
-    User.findById(req.params.id)
-        .then(user => {
-            user.cart = req.body.cart;
 
-            user.save()
-                .then(() => res.json('Cart updated!'))
-                .catch(err => res.status(400).json('Error: ' + err));
-        })
-        .catch(err => res.status(400).json('Error: ' + err));
-});
 
-router.route('/fav/:id').put((req, res) => {
-    User.findById(req.params.id)
-        .then(user => {
-            user.fav = req.body.fav;
 
-            user.save()
-                .then(() => res.json('Favs updated!'))
-                .catch(err => res.status(400).json('Error: ' + err));
-        })
-        .catch(err => res.status(400).json('Error: ' + err));
-});
 
 
 
