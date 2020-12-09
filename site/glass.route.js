@@ -19,13 +19,13 @@ const upload = multer({storage: storage});
 
 
 
-router.route('/').get((req, res) => {
+router.route('/').get((req, res) => { //return all glasses
     Glass.find()
         .then(glasses => res.json(glasses))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.post('/add',upload.single('img') , (req, res) => {
+router.post('/add',upload.single('img') , (req, res) => { //add new glass
     console.log(req.file);
   
     const code = req.body.code;
@@ -46,23 +46,16 @@ router.post('/add',upload.single('img') , (req, res) => {
 
 });
 
-router.route('/:id').get((req, res) => {
+router.route('/:id').get((req, res) => { //get glass by id
     Glass.findById(req.params.id)
-        .then(exercise => res.json(exercise))
+        .then(glass => res.json(glass))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/:id').delete((req, res) => {
+router.route('/:id').delete((req, res) => { //delete by id
     Glass.findByIdAndDelete(req.params.id)
         .then(() => res.json('glass deleted.'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
-
-
-
-
-
-
-
 
 module.exports = router;
