@@ -1,6 +1,40 @@
+console.log("verificar");
+
+import axios from 'axios';
+
+const options = {
+    method: 'POST',
+    url: 'http://localhost:3002/user/add',
+    headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET',
+        'Access-Control-Request-Method': '*',
+        'Access-Control-Allow-Headers': 'Origin',
+    },
+    data: {
+        username: 'brr1234',
+        password: '123456',
+        address: 'Rua aaa, 349',
+        cart: '[{1,2}]',
+        card_number: '1234567889561',
+        cvv: '123',
+        card_date: '10-12-2025'
+    }
+}
+
+
+
 window.onload = (event) => {
+    console.log("verificar se entrou");
+    axios.request(options).then(function(response) {
+        console.log(response.data);
+    }).catch(function(error) {
+        console.error(error);
+    });
 
 }
+
 var app = new Vue({
     el: "#app",
     data: {

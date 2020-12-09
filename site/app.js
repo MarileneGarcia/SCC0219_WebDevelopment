@@ -13,7 +13,8 @@ var indexRouter = require('./routes/index');
 
 
 var app = express();
-const port = 3000;
+app.use(express.static('pages/'));
+const port = 3002;
 
 
 
@@ -39,25 +40,25 @@ app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 
 
 // replace the uri string with your connection string.
 
-const uri = "mongodb+srv://[USER(REMOVE'[]')]:[PASSWORD]@cluster017.mz88j.mongodb.net/test?retryWrites=true;";
+const uri = "mongodb+srv://adele:jSJ9V8okBvF3kFFu@cluster017.mz88j.mongodb.net/test?retryWrites=true;";
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
