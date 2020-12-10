@@ -1,8 +1,18 @@
-/*let remove_button = document.getElementById("remove_button");
-let input_remove = document.getElementById("remove_code");
-let remove = document.getElementById("remove");
+oculos_lista = [];
 
-let add_button = document.getElementById("add_button");*/
+window.onload = (event) => {
+    fetch('http://localhost:3002/glass').
+    then(function(response) {
+        return response.json();
+    }).then(function(response) {
+        response.forEach(function(item) {
+            var nome = "../images/" + String(item.img);
+            item.img = nome;
+            oculos_lista.push(item);
+            console.log(item);
+        })
+    })
+}
 
 var app = new Vue({
     el: "#app",
@@ -13,9 +23,30 @@ var app = new Vue({
         details: null,
         format: null,
         tipo: null,
+        image: null,
         img: null,
+        oculos: oculos_lista,
     },
+
     methods: {
+        onFileChange(e) {
+            var files = e.target.files || e.dataTransfer.files;
+            if (!files.length)
+                return;
+            this.createImage(files[0]);
+            this.img = files[0];
+        },
+        createImage(file) {
+            var image = new Image();
+            var reader = new FileReader();
+            var vm = this;
+
+            reader.onload = (e) => {
+                vm.image = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        },
+
         add() {
             const url = 'http://localhost:3002/glass/add';
 
@@ -26,16 +57,11 @@ var app = new Vue({
             formData.append('details', this.details);
             formData.append('format', this.format);
             formData.append('tipo', this.tipo);
-            formData.append('img', this.img, File);
-
-            console.log(formData);
+            formData.append('img', this.img);
 
             const options = {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
+                body: formData
             }
 
             fetch(url, options).then(res => {
@@ -44,6 +70,46 @@ var app = new Vue({
             }).catch(err => {
                 console.log(err);
             })
+        },
+
+        atualizar() {
+
+            /*
+            const url_add = 'http://localhost:3002/glass/add';
+            const url_remove = 'http://localhost:3002/glass/';
+            const url_get = 'http://localhost:3002/glass/';
+
+            var formData = new FormData();
+            formData.append('code', this.code);
+            formData.append('price', this.price);
+            formData.append('alias', this.alias);
+            formData.append('details', this.details);
+            formData.append('format', this.format);
+            formData.append('tipo', this.tipo);
+            formData.append('img', this.img);
+
+            const options_add = {
+                method: 'POST',
+                body: formData
+            }
+
+            fetch(url_add, options_add).then(res => {
+                console.log(res);
+                return 0;
+            }).catch(err => {
+                console.log(err);
+            })
+
+            const options_get = {
+                method: 'GET',
+            }
+
+            fetch(url_get, options_get).then(res => {
+                console.log(res);
+                return 0;
+            }).catch(err => {
+                console.log(err);
+            })*/
         }
     }
 });

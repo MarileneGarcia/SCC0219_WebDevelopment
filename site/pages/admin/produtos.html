@@ -27,19 +27,19 @@
                 <p class="meus-dados">Adicionar Produto</p>
                 <hr class="black">
                 <p class="nome" style="top: 350px;">Nome:</p>
-                <input v-model="alias" class="info" style="top: 350px;">
+                <input v-model="alias" class="info" type="text" style="top: 350px;">
                 <p class="nome" style="top: 402px;">Código do Modelo:</p>
-                <input v-model="code" class="info" style="top: 402px;">
+                <input v-model="code" class="info" type="text" style="top: 402px;">
                 <p class="nome" style="top: 454px;">Preço:</p>
-                <input v-model="price" class="info" style="top: 454px;">
+                <input v-model="price" class="info" type="number" style="top: 454px;">
                 <p class="nome" style="top: 506px;">Detalhes:</p>
-                <textarea v-model="details" class="info" style="top: 506px;" cols="30" rows="3"></textarea>
+                <textarea v-model="details" type="text" class="info" style="top: 506px;" cols="30" rows="3"></textarea>
                 <p class="nome" style="top: 592px;">Armação:</p>
-                <input v-model="format" class="info" style="top: 592px;">
+                <input v-model="format" type="text" class="info" style="top: 592px;">
                 <p class="nome" style="top: 654px;">Tipo:</p>
-                <input v-model="tipo" class="info" style="top: 654px;">
+                <input v-model="tipo" type="text" class="info" style="top: 654px;">
                 <p class="nome" style="top: 716px;">Imagem:</p>
-                <input class="info" style="top: 716px;" type="file">
+                <input v-on:change="onFileChange" class="info" style="top: 716px;" type="file">
 
                 <a href="" v-on:click="add" id="add_button" class="edit" style="left: 1086px; top: 840px;">Adicionar Produto</a>
 
@@ -49,21 +49,21 @@
                 <p class="atualizar">Atualizar Produto</p>
                 <hr class="black2">
                 <p class="nome" style="top: 1030px;">Insira Código do Modelo:</p>
-                <input class="info" style="top: 1030px;">
+                <input v-model="code" class="info" style="top: 1030px;">
                 <p class="nome" style="top: 1082px;">Atualizar Nome:</p>
-                <input class="info" style="top: 1082px;">
+                <input v-model="alias" class="info" style="top: 1082px;">
                 <p class="nome" style="top: 1134px;">Atualizar Preço:</p>
-                <input class="info" style="top: 1134px;">
+                <input v-model="price" class="info" style="top: 1134px;">
                 <p class="nome" style="top: 1186px;">Atualizar Detalhes:</p>
-                <textarea class="info" style="top: 1186px;" cols="30" rows="3"></textarea>
+                <textarea v-model="details" class="info" style="top: 1186px;" cols="30" rows="3"></textarea>
                 <p class="nome" style="top: 1262px;">Atualizar Armação:</p>
-                <input class="info" style="top: 1262px;">
-                <p class="nome" style="top: 1314px;">Atualizar Tamanho:</p>
-                <input class="info" style="top: 1314px;">
+                <input v-model="format" class="info" style="top: 1262px;">
+                <p class="nome" style="top: 1314px;">Atualizar Tipo:</p>
+                <input v-model="tipo" class="info" style="top: 1314px;">
                 <p class="nome" style="top: 1366px;">Atualizar Imagem:</p>
-                <input class="info" style="top: 1366px;" type="file">
+                <input v-on:change="onFileChange" class="info" style="top: 1366px;" type="file">
 
-                <a href="" class="edit" style="left: 1086px; top: 1490px;">Atualizar Produto</a>
+                <a href="" v-on:click="atualizar" class="edit" style="left: 1086px; top: 1490px;">Atualizar Produto</a>
             </div>
 
 
@@ -95,6 +95,20 @@
                 <input id="remove_code" class="info" style="top: 2275px;">
                 <a href="" id="remove_button" class="edit" style="left: 1086px; top: 2300px; margin-bottom: 10vw;">Remover Produto</a>
             </div>
+
+            <div class="lista" id="lista">
+                <p class="listar">Lista de Produtos</p>
+                <hr class="black5">
+                <div class="itens" v-for="item in oculos">
+                    <div>
+                        Codigo do modelo = {{ item.code }} <br>
+                        <img class="size" :src="item.img">
+                        <br> Nome do modelo = {{ item.alias }}
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
     <div class="header" style="position: fixed;">
