@@ -9,7 +9,6 @@ window.onload = (event) => {
             var nome = "../images/" + String(item.img);
             item.img = nome;
             oculos_lista.push(item);
-            console.log(item);
         })
     })
 }
@@ -23,6 +22,12 @@ var app = new Vue({
         details: null,
         format: null,
         tipo: null,
+        code_at: null,
+        price_at: null,
+        alias_at: null,
+        details_at: null,
+        format_at: null,
+        tipo_at: null,
         image: null,
         img: null,
         oculos: oculos_lista,
@@ -47,70 +52,98 @@ var app = new Vue({
             reader.readAsDataURL(file);
         },
 
+        checar_dados_adicionar() {
+            if (this.code == null || this.price == null || this.alias == null || this.details == null || this.format == null || this.tipo == null || this.img == null) {
+                window.alert('Por favor, preencha todos os campos e tente novamente');
+                return false;
+            }
+            return true;
+        },
         add() {
             const url = 'http://localhost:3002/glass/add';
+            if (this.checar_dados_adicionar()) {
+                var formData = new FormData();
+                formData.append('code', this.code);
+                formData.append('price', this.price);
+                formData.append('alias', this.alias);
+                formData.append('details', this.details);
+                formData.append('format', this.format);
+                formData.append('tipo', this.tipo);
+                formData.append('img', this.img);
 
-            var formData = new FormData();
-            formData.append('code', this.code);
-            formData.append('price', this.price);
-            formData.append('alias', this.alias);
-            formData.append('details', this.details);
-            formData.append('format', this.format);
-            formData.append('tipo', this.tipo);
-            formData.append('img', this.img);
+                const options = {
+                    method: 'POST',
+                    body: formData
+                }
 
-            const options = {
-                method: 'POST',
-                body: formData
+                fetch(url, options).then(res => {
+                    console.log(res);
+                    return 0;
+                }).catch(err => {
+                    console.log(err);
+                })
+
+                window.alert('Item adicionado com sucesso');
+                window.location.reload();
             }
-
-            fetch(url, options).then(res => {
-                console.log(res);
-                return 0;
-            }).catch(err => {
-                console.log(err);
-            })
+        },
+        checar_dados_atualizar() {
+            if (this.code_at == null || this.price_at == null || this.alias_at == null || this.details_at == null || this.format_at == null || this.tipo_at == null || this.img == null) {
+                window.alert('Por favor, preencha todos os campos e tente novamente');
+                return false;
+            }
+            return true;
         },
 
         atualizar() {
-
-            /*
             const url_add = 'http://localhost:3002/glass/add';
-            const url_remove = 'http://localhost:3002/glass/';
-            const url_get = 'http://localhost:3002/glass/';
+            var url_remove = 'http://localhost:3002/glass/';
+            var codigo = this.code_at;
 
-            var formData = new FormData();
-            formData.append('code', this.code);
-            formData.append('price', this.price);
-            formData.append('alias', this.alias);
-            formData.append('details', this.details);
-            formData.append('format', this.format);
-            formData.append('tipo', this.tipo);
-            formData.append('img', this.img);
+            if (this.checar_dados_atualizar()) {
+                const options_remove = {
+                    method: 'DELETE',
+                }
 
-            const options_add = {
-                method: 'POST',
-                body: formData
+                this.oculos.forEach(function(item) {
+                    if (item.code == codigo) {
+                        url_remove = url_remove + item._id;
+                    }
+                });
+
+                fetch(url_remove, options_remove).then(res => {
+                    console.log(res);
+                    return 0;
+                }).catch(err => {
+                    console.log(err);
+                });
+
+                var formData = new FormData();
+                formData.append('code', this.code_at);
+                formData.append('price', this.price_at);
+                formData.append('alias', this.alias_at);
+                formData.append('details', this.details_at);
+                formData.append('format', this.format_at);
+                formData.append('tipo', this.tipo_at);
+                formData.append('img', this.img);
+
+                const options_add = {
+                    method: 'POST',
+                    body: formData
+                }
+
+                fetch(url_add, options_add).then(res => {
+                    console.log(res);
+                    return 0;
+                }).catch(err => {
+                    console.log(err);
+                })
+                window.alert('Item atualizado com sucesso');
+                window.location.reload();
+
             }
-
-            fetch(url_add, options_add).then(res => {
-                console.log(res);
-                return 0;
-            }).catch(err => {
-                console.log(err);
-            })
-
-            const options_get = {
-                method: 'GET',
-            }
-
-            fetch(url_get, options_get).then(res => {
-                console.log(res);
-                return 0;
-            }).catch(err => {
-                console.log(err);
-            })*/
         }
+
     }
 });
 
