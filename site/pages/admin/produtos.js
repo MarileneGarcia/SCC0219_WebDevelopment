@@ -105,12 +105,12 @@ var app = new Vue({
                 if (item.code == codigo) {
                     url_remove = url_remove + item._id;
                     flag = true;
-                } else {
-                    window.alert('Nao foi encontrado nenhum produto com esse codigo')
                 }
             });
 
-            if (this.checar_dados_atualizar() || flag) {
+            if (!flag) {
+                window.alert('Nao foi encontrado nenhum produto com esse codigo');
+            } else if (this.checar_dados_atualizar()) {
                 const options_remove = {
                     method: 'DELETE',
                 }
