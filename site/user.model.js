@@ -14,36 +14,36 @@ const userSchema = new Schema({
     },
     password: {
         type: String,
-        required:true,
-        minlength:8,
-        trim:true
+        required: true,
+        minlength: 8,
+        trim: true
 
     },
-    address:{
+    address: {
         type: String,
-        required:true,
+        required: true,
     },
     cart: {
         type: [String],
-        
+
     },
-    fav:{
+    fav: {
         type: [String],
     },
-    card_number:{
+    card_number: {
         type: Number,
-        minlength:16,
-        maxlength:16,
+        minlength: 16,
+        maxlength: 16,
         required: true,
 
     },
-    cvv:{
-        type:Number,
-        minlength:3,
-        maxlength:3,
+    cvv: {
+        type: Number,
+        minlength: 3,
+        maxlength: 3,
         required: true,
     },
-    card_date:{
+    card_date: {
         type: Date,
         required: true,
     },

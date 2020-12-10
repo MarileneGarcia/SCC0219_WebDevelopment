@@ -27,21 +27,21 @@
                 <p class="meus-dados">Adicionar Produto</p>
                 <hr class="black">
                 <p class="nome" style="top: 350px;">Nome:</p>
-                <input class="info" style="top: 350px;">
+                <input v-model="alias" class="info" style="top: 350px;">
                 <p class="nome" style="top: 402px;">Código do Modelo:</p>
-                <input class="info" style="top: 402px;">
+                <input v-model="code" class="info" style="top: 402px;">
                 <p class="nome" style="top: 454px;">Preço:</p>
-                <input class="info" style="top: 454px;">
+                <input v-model="price" class="info" style="top: 454px;">
                 <p class="nome" style="top: 506px;">Detalhes:</p>
-                <textarea class="info" style="top: 506px;" cols="30" rows="3"></textarea>
+                <textarea v-model="details" class="info" style="top: 506px;" cols="30" rows="3"></textarea>
                 <p class="nome" style="top: 592px;">Armação:</p>
-                <input class="info" style="top: 592px;">
-                <p class="nome" style="top: 654px;">Tamanho:</p>
-                <input class="info" style="top: 654px;">
+                <input v-model="format" class="info" style="top: 592px;">
+                <p class="nome" style="top: 654px;">Tipo:</p>
+                <input v-model="tipo" class="info" style="top: 654px;">
                 <p class="nome" style="top: 716px;">Imagem:</p>
                 <input class="info" style="top: 716px;" type="file">
 
-                <a href="" class="edit" style="left: 1086px; top: 840px;">Adicionar Produto</a>
+                <a href="" v-on:click="add" id="add_button" class="edit" style="left: 1086px; top: 840px;">Adicionar Produto</a>
 
             </div>
 

@@ -14,7 +14,12 @@ var app = new Vue({
     },
     methods: {
         checagem_login: function(e) {
-            if (this.email_login && this.senha_login) {
+            if (this.email_login == 'admin' && this.senha_login == 'admin') {
+                // enviar para o banco de dados //
+                alert("Login feito como admin");
+                window.open("../admin/admin_dados.html", "_self");
+                login = true;
+            } else if (this.email_login && this.senha_login) {
                 // enviar para o banco de dados //
                 alert("Login feito com sucesso");
                 window.open("../user/user_data.html", "_self");

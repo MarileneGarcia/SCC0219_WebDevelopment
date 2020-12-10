@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const userRouter = require('./user.route');
 const glassRouter = require('./glass.route');
 var bodyParser = require('body-parser');
-
 var indexRouter = require('./routes/index');
 
 
