@@ -99,17 +99,21 @@ var app = new Vue({
             const url_add = 'http://localhost:3002/glass/add';
             var url_remove = 'http://localhost:3002/glass/';
             var codigo = this.code_at;
+            var flag = false;
 
-            if (this.checar_dados_atualizar()) {
+            this.oculos.forEach(function(item) {
+                if (item.code == codigo) {
+                    url_remove = url_remove + item._id;
+                    flag = true;
+                } else {
+                    window.alert('Nao foi encontrado nenhum produto com esse codigo')
+                }
+            });
+
+            if (this.checar_dados_atualizar() || flag) {
                 const options_remove = {
                     method: 'DELETE',
                 }
-
-                this.oculos.forEach(function(item) {
-                    if (item.code == codigo) {
-                        url_remove = url_remove + item._id;
-                    }
-                });
 
                 fetch(url_remove, options_remove).then(res => {
                     console.log(res);
