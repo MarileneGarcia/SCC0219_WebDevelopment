@@ -83,7 +83,7 @@ var app = new Vue({
                     body: formData
                 }
 
-                fetch(url_add, options_add).then(res => {
+                fetch(url, options).then(res => {
                     return res.json();
                 }).then(res => {
                     if (res == 'glass added') {
