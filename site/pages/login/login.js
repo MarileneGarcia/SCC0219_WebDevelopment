@@ -1,3 +1,4 @@
+
 //banco de dados vai implementar essa parte
 var login = false;
 
@@ -31,21 +32,59 @@ var app = new Vue({
             e.preventDefault();
         },
 
-        checagem_cadastro: function(e) {
+        checagem_cadastro() {
             if (this.nome && this.sobrenome && this.email && this.senha && this.confirmar_senha) {
                 if (this.senha == this.confirmar_senha) {
-                    // enviar para o banco de dados //
-                    login = true;
-                    alert("Conta criado com sucesso");
-                    window.open("../user/user_data.html", "_self");
-                } else {
+                    return true;
+                }
+                 else {
                     alert("As duas senhas devem ser iguais");
-                    login = false;
+                    return false;
                 }
             } else {
                 alert("Por favor, preencher todos os campos");
+                return false;
             }
-            e.preventDefault();
+        },
+
+        create(){
+            const url = 'http://localhost:3002/User/add';
+            if(this.checagem_cadastro()){
+                const options = {
+                    method: 'POST',
+                    body: {
+                        username: this.email,
+                        password: this.senha,
+                        address: 'endereco',
+                        //cart: ["[{1,2},{1,15},{1,16}]"],
+                        //fav: [],
+                        card_number: 1234123412341234,
+                        cvv: 123,
+                        card_date: "2025-10-12T03:00:00.000Z"
+
+                    }
+                }
+            fetch(url, options).then(res => {
+                console.log(res);
+                return res.json();
+            }).then(res => {
+                if (res == 'glass added') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }).then(res => {
+                if (!res) {
+                    console.log(res);
+                    window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
+                }
+            }).catch(err => {
+                console.log(err);
+            })
+
+            //window.alert('Item adicionado com sucesso');
+            //window.location.reload();
+            }
         }
     }
 

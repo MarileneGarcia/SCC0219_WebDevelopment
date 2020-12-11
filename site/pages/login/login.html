@@ -14,8 +14,8 @@
 <body>
     <div id="app">
         <div class="col1" style="position: absolute;">
-            <form @submit="checagem_cadastro" method="post">
-                <button style="margin-top: 50vw;">Criar</button>
+            
+                <button v-on:click='create' style="margin-top: 50vw;">Criar</button>
                 <p class="p1">Novo usuário</p>
                 <p class="p2" style="margin-top: 68px;">Nome:</p>
                 <input v-model="nome" required>
@@ -27,7 +27,7 @@
                 <input v-model="senha" required type="password">
                 <p class="p2" style="margin-top: 68px;">Confirmar Senha:</p>
                 <input v-model="confirmar_senha" required type="password">
-            </form>
+            
         </div>
 
 
@@ -36,7 +36,7 @@
 
         <form @submit="checagem_login" method="post">
             <div class="col2" style="position: absolute;">
-                <button style="margin-top: 25vw;">Entrar</button>
+                <button  style="margin-top: 25vw;">Entrar</button>
                 <p class="p1">Usuário Existente</p>
                 <p class="p2" style="margin-top: 68px;">E-mail:</p>
                 <input v-model="email_login" required>

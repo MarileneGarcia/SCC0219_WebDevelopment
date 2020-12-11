@@ -14,21 +14,21 @@ router.route('/add').post((req, res) => {
     const username = req.body.username;
     const password= req.body.password;
     const address = req.body.address;
-    const cart = req.body.cart;
+    //const cart = req.body.cart;
     const card_number = req.body.card_number;
     const cvv = req.body.cvv;
     const card_date = req.body.card_date;
-    const newUser = new User({ username, password, address, cart, card_number, cvv, card_date });
+    const newUser = new User({ username, password, address, card_number, cvv, card_date });
 
     newUser.save()
-        .then(() => res.json('User added!'))
+        .then(() => {res.json('User added!');})
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/:id').get((req, res) => {
     User.findById(req.params.id)
         .then(exercise => res.json(exercise))
-        .catch(err => res.status(400).json('Error: ' + err));
+        .catch(err => res.status(402).json('Error: ' + err));
 });
 
 router.route('/:id').delete((req, res) => {
