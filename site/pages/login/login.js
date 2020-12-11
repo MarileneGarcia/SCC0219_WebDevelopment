@@ -1,5 +1,5 @@
+
 //banco de dados vai implementar essa parte
-var login = false;
 
 var app = new Vue({
     el: '#app',
@@ -7,13 +7,14 @@ var app = new Vue({
         nome: null,
         sobrenome: null,
         email: null,
+        endereco: null,
         senha: null,
         confirmar_senha: null,
         email_login: null,
         senha_login: null,
     },
     methods: {
-        checagem_login: function(e) {
+        /*checagem_login: function(e) {
             if (this.email_login == 'admin' && this.senha_login == 'admin') {
                 // enviar para o banco de dados //
                 alert("Login feito como admin");
@@ -29,13 +30,14 @@ var app = new Vue({
                 login = false;
             }
             e.preventDefault();
-        },
+        },*/
 
         checagem_cadastro() {
-            if (this.nome && this.sobrenome && this.email && this.senha && this.confirmar_senha) {
+            if (this.nome && this.sobrenome && this.email && this.email && this.senha && this.confirmar_senha) {
                 if (this.senha == this.confirmar_senha) {
                     return true;
-                } else {
+                }
+                 else {
                     alert("As duas senhas devem ser iguais");
                     return false;
                 }
@@ -45,52 +47,77 @@ var app = new Vue({
             }
         },
 
-        create() {
+        create(){
             const url = 'http://localhost:3002/User/add';
-            if (this.checagem_cadastro()) {
+            if(this.checagem_cadastro()){
                 const options = {
                     method: 'POST',
-                    body: {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
                         username: this.email,
                         password: this.senha,
-                        address: 'endereco',
-                        //cart: ["[{1,2},{1,15},{1,16}]"],
-                        //fav: [],
+                        address: this.endereco,
                         card_number: 1234123412341234,
                         cvv: 123,
                         card_date: "2025-10-12T03:00:00.000Z"
 
-                    }
+                    })
                 }
-                fetch(url, options).then(res => {
-                    console.log(res);
-                    return res.json();
-                }).then(res => {
-                    if (res == 'glass added') {
-                        return true;
-                    } else {
-                        return false;
-                    }
-                }).then(res => {
-                    if (!res) {
-                        console.log(res);
-                        window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
-                    }
-                }).catch(err => {
-                    console.log(err);
-                })
+                
+            fetch(url, options).then(res => {
+                console.log(res);
+                return res.json();
+            }).then(res => {
+                if (res == 'User added!') {
+                    window.alert('Cadastro feito com Sucesso!');
+                    return true;
+                } else {
+                    return false;
+                }
+            }).then(res => {
+                if (!res) {
+                    window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
+                }
+            }).catch(err => {
+                console.log(err);
+            })
 
-                //window.alert('Item adicionado com sucesso');
-                //window.location.reload();
+            window.alert('Item adicionado com sucesso');
+            //window.location.reload();
             }
+        },
+
+    entrar(){
+        const url = 'http://localhost:3002/User/';
+        const option_get = {
+            method: 'GET',
         }
+
+        const username = this.email_login;
+        const password = this.senha_login;
+        fetch(url,option_get).then(res => {
+            return res.json();
+        }).then(res => {
+            res.forEach(function(item){
+                if(username == item.username && password == item.password){
+                    window.alert("deu certo");
+                }
+
+            });
+            if (!res) {
+                window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
+            }
+        }).catch(err => {
+            console.log(err);
+        })
+        
     }
+}
 
 });
 
-if (login == true) {
-    window.open("../user/user_data.html", "_self");
-}
 
 function w3_open() {
     //  document.getElementById("main").style.marginLeft = "25%";

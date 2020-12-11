@@ -15,7 +15,7 @@
     <div id="app">
         <div class="col1" style="position: absolute;">
             
-                <button v-on:click='create' style="margin-top: 50vw;">Criar</button>
+                <button v-on:click='create' style="margin-top: 58vw;">Criar</button>
                 <p class="p1">Novo usuário</p>
                 <p class="p2" style="margin-top: 68px;">Nome:</p>
                 <input v-model="nome" required>
@@ -23,10 +23,13 @@
                 <input v-model="sobrenome" required>
                 <p class="p2" style="margin-top: 68px;">E-mail:</p>
                 <input v-model="email" required>
+                <p class="p2" style="margin-top: 68px;">Endereço:</p>
+                <input v-model="endereco" required>
                 <p class="p2" style="margin-top: 68px;">Senha:</p>
-                <input v-model="senha" required type="password">
+                <input v-model="senha" minlength="8" required type="password">
                 <p class="p2" style="margin-top: 68px;">Confirmar Senha:</p>
                 <input v-model="confirmar_senha" required type="password">
+                <div style="height: 10vw;"></div>
             
         </div>
 
@@ -34,16 +37,14 @@
 
         <div class="line"></div>
 
-        <form @submit="checagem_login" method="post">
             <div class="col2" style="position: absolute;">
-                <button  style="margin-top: 25vw;">Entrar</button>
+                <button v-on:click='entrar' style="margin-top: 25vw;">Entrar</button>
                 <p class="p1">Usuário Existente</p>
                 <p class="p2" style="margin-top: 68px;">E-mail:</p>
                 <input v-model="email_login" required>
                 <p class="p2" style="margin-top: 68px;">Senha:</p>
                 <input v-model="senha_login" required type="password">
             </div>
-        </form>
     </div>
 
 
