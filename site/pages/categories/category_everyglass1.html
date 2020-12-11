@@ -21,8 +21,8 @@
                     <div>
                         <h2>{{item.model}} </h2>
                         <a href="../product/glass.html"><img class="glassimg" :src="item.img"></a>
-
-                        <h3>{{item.price}}</h3>
+                        <h3>{{item.alias}}</h3>
+                        <h4>R$: {{item.price}}</h4>
                         <button onclick="window.location.href='../user/user_data.html';">Add to Cart</button>
                         <button style="background-color: rgb(192, 192, 192);"><a href="" v-on:click="removeFav(item)">Remove</a></button>
                     </div>
@@ -90,11 +90,12 @@
                     <u>MAIS VENDIDOS</u> ESSENCIAIS PREMIUN
                 </ul>
 
-                <div v-for="item of glasses" class="glass">
+                <div v-for="item in glasses_mv" class="glass">
                     <div>
                         <h2>{{item.model}} </h2>
                         <a href="../product/glass.html"><img class="glassimg" :src="item.img"></a>
-                        <h3>{{item.price}}</h3>
+                        <h3>{{item.alias}}</h3>
+                        <h4>R$: {{item.price}}</h4>
                         <button onclick="window.location.href='../user/user_dados.html';">Ver mais</button>
                         <button v-on:click="fav(item)">Add to Fav</button>
                     </div>
@@ -104,9 +105,10 @@
             </div>
             <div class="footer">desenvolvido por: Marilene Garcia, Bruno Helou, Rafael Pinho</div>
         </div>
+    </div>
 </body>
 
 </html>
 <script src="https://unpkg.com/vue"></script>
-<script src="./category_everyglass.js" type="module">
+<script src="./category_everyglass.js">
 </script>

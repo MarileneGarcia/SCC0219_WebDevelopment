@@ -58,4 +58,16 @@ router.route('/:id').delete((req, res) => { //delete by id
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+/*router.route('/:id').put((req, res) => {
+    Glass.findById(req.params.id)
+        .then(res => {
+            res.tipo = "everyglass";
+
+            res.save()
+                .then(() => res.json('glass updated!'))
+                .catch(err => res.status(400).json('Error: ' + err));
+        })
+        .catch(err => res.status(400).json('Error: ' + err));
+});*/
+
 module.exports = router;

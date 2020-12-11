@@ -22,12 +22,12 @@
                         <img class="glassimg" :src="item.img">
 
                         <h3>{{item.price}}</h3>
-                        <button v-on:click="addCart()" >Add to Cart</button>
+                        <button v-on:click="addCart()">Add to Cart</button>
                         <button style="background-color: rgb(192, 192, 192);"><a href="" v-on:click="removeFav(item)">Remove</a></button>
                     </div>
 
                 </div>
-                
+
                 <hr>
             </div>
             <div v-else> Nenhum item adicionado </div>
@@ -85,11 +85,12 @@
             <div class="galery">
                 <h1>Promoções da Galeria </h1>
 
-                <div v-for="item of glasses" class="glass">
+                <div v-for="item in glasses" class="glass">
                     <div>
                         <h2><a href="../product/glass.html"> {{item.model}} </a></h2>
                         <a href="../product/glass.html"><img class="glassimg" :src="item.img"></a>
-                        <h3>{{item.price}}</h3>
+                        <h3>{{item.alias}}</h3>
+                        <h4>R$: {{item.price}}</h4>
                         <button v-on:click="addCart()">add To Cart</button>
                         <button v-on:click="fav(item)">WishList</button>
                     </div>

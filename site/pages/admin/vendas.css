@@ -1,25 +1,23 @@
-html{
+html {
     margin: 0%;
 }
 
-div.dados{
+div.dados {
     color: #4E4747;
     position: absolute;
-
 }
 
-div.box{
+div.box {
     position: absolute;
     width: 267px;
     height: 289px;
     left: 29px;
     top: 350px;
-    
     background: #5B2434;
     color: white;
 }
 
-.box-p{
+.box-p {
     text-decoration: none;
     color: white;
     margin-top: 30px;
@@ -32,16 +30,15 @@ div.box{
     text-align: center;
 }
 
-hr.white{
+hr.white {
     position: absolute;
     width: 265px;
     height: 1px;
     color: white;
     background-color: white;
-
 }
 
-p.page-header{
+p.page-header {
     font-size: 46px;
     font-weight: bold;
     position: relative;
@@ -49,15 +46,15 @@ p.page-header{
     left: 334px;
 }
 
-p.meus-dados{
-    font-size: 30px; 
+p.meus-dados {
+    font-size: 30px;
     font-weight: bold;
     position: relative;
     top: 141px;
     left: 334px;
 }
 
-hr.black{
+hr.black {
     position: absolute;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -66,39 +63,46 @@ hr.black{
     left: 334px;
     top: 350px;
     background-color: #4E4747;
-    
     border: 1px solid #4E4747;
 }
 
-.nome{
+.nome {
     position: absolute;
     margin-top: 32px;
     width: 301px;
     left: 334px;
     font-size: 24px;
     font-style: normal;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-.info{
+.imagem {
+    position: absolute;
+    margin-top: 0px;
+    left: 310px;
+    width: 1000px;
+    height: 600px;
+    top: 450px;
+}
+
+.info {
     position: absolute;
     margin-top: 32px;
     width: 301px;
     left: 697px;
     font-size: 24px;
     font-style: normal;
-    color: black; 
+    color: black;
 }
 
-.edit{
+.edit {
     text-decoration: underline;
-    color: #4E4747  ;
+    color: #4E4747;
     position: absolute;
     width: 100%;
     height: 33px;
     left: 1086px;
     top: 682px;
-    
     font-style: normal;
     font-weight: bold;
     font-size: 24px;

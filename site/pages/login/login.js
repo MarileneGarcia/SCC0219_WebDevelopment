@@ -1,4 +1,3 @@
-
 //banco de dados vai implementar essa parte
 var login = false;
 
@@ -36,8 +35,7 @@ var app = new Vue({
             if (this.nome && this.sobrenome && this.email && this.senha && this.confirmar_senha) {
                 if (this.senha == this.confirmar_senha) {
                     return true;
-                }
-                 else {
+                } else {
                     alert("As duas senhas devem ser iguais");
                     return false;
                 }
@@ -47,9 +45,9 @@ var app = new Vue({
             }
         },
 
-        create(){
+        create() {
             const url = 'http://localhost:3002/User/add';
-            if(this.checagem_cadastro()){
+            if (this.checagem_cadastro()) {
                 const options = {
                     method: 'POST',
                     body: {
@@ -64,26 +62,26 @@ var app = new Vue({
 
                     }
                 }
-            fetch(url, options).then(res => {
-                console.log(res);
-                return res.json();
-            }).then(res => {
-                if (res == 'glass added') {
-                    return true;
-                } else {
-                    return false;
-                }
-            }).then(res => {
-                if (!res) {
+                fetch(url, options).then(res => {
                     console.log(res);
-                    window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
-                }
-            }).catch(err => {
-                console.log(err);
-            })
+                    return res.json();
+                }).then(res => {
+                    if (res == 'glass added') {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }).then(res => {
+                    if (!res) {
+                        console.log(res);
+                        window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
+                    }
+                }).catch(err => {
+                    console.log(err);
+                })
 
-            //window.alert('Item adicionado com sucesso');
-            //window.location.reload();
+                //window.alert('Item adicionado com sucesso');
+                //window.location.reload();
             }
         }
     }

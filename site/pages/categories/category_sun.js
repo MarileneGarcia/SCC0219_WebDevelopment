@@ -1,53 +1,40 @@
-window.onload = (event) => {
+var oculos_mv = [];
+var oculos_e = [];
+var oculos_p = [];
 
+window.onload = (event) => {
+    fetch('http://localhost:3002/glass').
+    then(function(response) {
+        return response.json();
+    }).then(function(response) {
+        response.forEach(function(item) {
+            if (item.tipo == "sun") {
+                console.log("entrou aq");
+                var nome = "../images/" + String(item.img);
+                if (item.details == "Em Promocao" || item.details == "Em promocao" || item.details == "Novidade" || item.details == "novidade") {
+                    item.img = nome;
+                    oculos_mv.push(item);
+                } else if (item.details == "Simples" || item.details == "simples" || item.details == "Em promocao" || item.details == "Em Promocao") {
+                    item.img = nome;
+                    oculos_e.push(item);
+                } else if (item.details == "Prime" || item.details == "prime") {
+                    item.img = nome;
+                    oculos_p.push(item);
+                }
+            }
+        }).catch(err => {
+            window.alert('Erro inesperado, recarregue a página');
+            console.log(err);
+        })
+    })
 }
+
 var app = new Vue({
     el: "#app",
     data: {
-        glasses: {
-            glass1: {
-                type: "Aviator",
-                model: "Aviator x-10",
-                price: "R$ 3,50",
-                style: "",
-                img: "../images/1-removebg-preview.png",
-            },
-            glass2: {
-                type: "hello",
-                model: "Quadrado surf",
-                price: "R$ 10,50",
-                style: "",
-                img: "../images/2-removebg-preview.png",
-            },
-            glass3: {
-                type: "hello",
-                model: "Styled mix",
-                price: "R$ 4,65",
-                style: "",
-                img: "../images/3-removebg-preview.png",
-            },
-            glass4: {
-                type: "hello",
-                model: "Retro Quadrado",
-                price: "R$ 9,52",
-                style: "",
-                img: "../images/4-removebg-preview.png",
-            },
-            glass5: {
-                type: "hello",
-                model: "Retro Circular",
-                price: "R$ 10,00",
-                style: "",
-                img: "../images/5-removebg-preview.png",
-            },
-            glass6: {
-                type: "hello",
-                model: "Quadrado Y-4",
-                price: "R$ 5,56",
-                style: "",
-                img: "../images/6-removebg-preview.png",
-            },
-        },
+        glasses_mv: oculos_mv,
+        glasses_e: oculos_e,
+        glasses_p: oculos_p,
         favs: []
 
     },

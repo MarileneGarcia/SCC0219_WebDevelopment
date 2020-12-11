@@ -21,9 +21,9 @@
                     <div>
                         <h2>{{item.model}} </h2>
                         <img class="glassimg" :src="item.img">
-
-                        <h3>{{item.price}}</h3>
-                        <button onclick="window.location.href='../user/user_data.html';">Add to Cart</button>
+                        <h3>{{item.alias}}</h3>
+                        <h4>R$: {{item.price}}</h4>
+                        <button onclick="window.location.href='../cart/cart.html';">Add to Cart</button>
                         <button style="background-color: rgb(192, 192, 192);"><a href="" v-on:click="removeFav(item)">Remove</a></button>
                     </div>
 
