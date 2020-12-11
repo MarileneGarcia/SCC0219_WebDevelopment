@@ -54,7 +54,7 @@ router.route('/:id').get((req, res) => { //get glass by id
 
 router.route('/:id').delete((req, res) => { //delete by id
     Glass.findByIdAndDelete(req.params.id)
-        .then(() => res.json('glass deleted.'))
+        .then(() => res.json('glass deleted'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 

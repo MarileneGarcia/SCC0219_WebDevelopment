@@ -73,7 +73,7 @@ p.listar {
     top: 2396px;
     position: absolute;
     width: fit-content;
-    top: 2396px;
+    top: 2496px;
     left: 334px;
     width: 400px;
 }
@@ -87,8 +87,9 @@ p.listar {
     width: 490px;
     display: block;
     background-color: #e6e6e6;
+    margin-top: 25px;
     margin-right: 45px;
-    margin-left: 45px;
+    margin-left: 5px;
     margin-bottom: 15px;
     padding-bottom: 10px;
 }
@@ -108,7 +109,7 @@ p.remover {
     font-weight: bold;
     position: absolute;
     width: fit-content;
-    top: 2146px;
+    top: 2256px;
     left: 334px;
     width: 400px;
 }
@@ -153,7 +154,7 @@ hr.black4 {
     width: 918px;
     height: 0px;
     left: 334px;
-    top: 2223px;
+    top: 2330px;
     background-color: #4E4747;
     border: 1px solid #4E4747;
 }
@@ -164,7 +165,7 @@ hr.black5 {
     width: 918px;
     height: 0px;
     left: 0px;
-    top: 77px;
+    top: 75px;
     background-color: #4E4747;
     border: 1px solid #4E4747;
 }
