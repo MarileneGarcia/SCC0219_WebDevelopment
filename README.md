@@ -97,8 +97,10 @@ Nenhum teste automatizado foi performado. Porém foram utilizados teste de usabi
 ## Resultados dos testes:
 Os resultados dos testes foram bons. O programa está responsivo e cumpre com os requisitos funcionais, porém algumas funcionalidades poderão ser aperfeiçoadas quando houver um banco de dados relacionado, deixando de ficar estático.
 
-## Procedimentos de construção:
-Para rodar o site, é necessário fazer o download de nossa pasta no github, extraí-la e abrir a página home.html
+## Procedimentos rodar o projeto:
+Para rodar o projeto, é necessário baixar o projeto do github extraí-lo e utilizar o seguinte comando para incializar o servidor:
+* node ./bin/www
+Após efetuado o comando o servior estará rodando na porta 3002. Para acessar a página incial do site é necessário entrar na url: http://localhost:3002/principal/principal.html
 
 ## Problemas:
 Um dos problemas foi o aumento do valor da compra no carrinho a partir do aumento da quantidade de um item específico.
