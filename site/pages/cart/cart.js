@@ -1,42 +1,59 @@
-window.onload = (event) => {
+oculos_lista = [];
+cart = [];
+user = localStorage.getItem("user");
+valor = [];
+valor_aux = 0;
 
+window.onload = (event) => {
+    const url = 'http://localhost:3002/User/' + this.user;
+    const options = {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    }
+    fetch(url, options).then(res => {
+        console.log(res);
+        return res.json();
+    }).then(res => {
+        console.log(res);
+        cart = res.cart;
+        console.log(cart);
+        console.log(res.cart);
+    }).catch(err => {
+        console.log(err);
+    })
+
+
+    fetch('http://localhost:3002/glass').
+    then(function(response) {
+        return response.json();
+    }).then(function(response) {
+        response.forEach(function(item) {
+            if (cart.includes(item._id)) {
+                var nome = "../images/" + String(item.img);
+                item.img = nome;
+                valor_aux = valor_aux + Number(item.price);
+                oculos_lista.push(item);
+                valor.push(valor_aux);
+                console.log(valor);
+            }
+        }).catch(err => {
+            window.alert('Erro inesperado, recarregue a página');
+            console.log(err);
+        })
+    })
+    console.log(oculos_lista);
 }
+
 var app = new Vue({
     el: "#app",
     data: {
-        sub_total: 0,
-        cart: [{
-                type: "Escuro",
-                model: "Aviator x-10",
-                price: 10.58,
-                style: "",
-                img: "../images/1-removebg-preview.png",
-            },
-            {
-                type: "Grau",
-                model: "Quadrado surf",
-                price: 10.58,
-                style: "",
-                img: "../images/2-removebg-preview.png",
-            },
-            {
-                type: "Grau",
-                model: "Styled mix",
-                price: 10.58,
-                style: "",
-                img: "../images/3-removebg-preview.png",
-            },
-            {
-                type: "Escuro",
-                model: "Retro Quadrado",
-                price: 10.58,
-                style: "",
-                img: "../images/4-removebg-preview.png",
-            },
-        ],
+        sub_total: valor,
         prices: [],
-        favs: []
-
+        favs: [],
+        carts: [],
+        oculos: oculos_lista,
     },
     methods: {
         helo() {
@@ -51,39 +68,6 @@ var app = new Vue({
                 }
             }
         },
-        price(glass) {
-            let flag = 0;
-            if (this.prices.length > 0) {
-
-                for (let i in this.prices) {
-                    if (this.prices[i].model != glass.model) {
-
-                    } else {
-                        this.prices.splice(i, 1);
-                        flag = 1;
-                    }
-                }
-                if (flag != 1) {
-                    this.prices.push(glass);
-                    //  window.alert('adicionado aos favoritos');
-                } else {
-                    //window.alert('Já está no favoritos');
-
-                }
-                console.log(this.favs);
-            } else {
-                console.log('else', this.favs.length);
-                this.prices.push(glass);
-            }
-            this.sub_total = 0;
-            console.log(this.prices)
-            for (let j in this.prices) {
-                console.log(this.prices)
-                this.sub_total = this.sub_total + this.prices[j].price;
-            }
-        },
-
-
     },
 
 });

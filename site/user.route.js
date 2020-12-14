@@ -12,7 +12,7 @@ router.route('/').get((req, res) => {
 router.route('/add').post((req, res) => {
     console.log(req.body);
     const username = req.body.username;
-    const password= req.body.password;
+    const password = req.body.password;
     const address = req.body.address;
     const card_number = req.body.card_number;
     const cvv = req.body.cvv;
@@ -39,7 +39,7 @@ router.route('/:id').delete((req, res) => {
 router.route('/cart/:id').put((req, res) => {
     User.findById(req.params.id)
         .then(user => {
-            user.cart = req.body.cart;
+            user.cart.push(req.body.cart);
 
             user.save()
                 .then(() => res.json('Cart updated!'))

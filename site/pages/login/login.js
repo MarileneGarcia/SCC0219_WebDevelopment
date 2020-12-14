@@ -97,8 +97,10 @@ var app = new Vue({
                 }).then(res => {
                     res.forEach(function(item) {
                         if (username == item.username && password == item.password) {
+                            localStorage.setItem("user", item._id);
+                            console.log(localStorage.getItem("user"));
                             window.alert("Login efetuado");
-                            window.open("../categories/category_everyglass1.html", "_self");
+                            window.open("../principal/principal.html", "_self");
                             return true;
                         }
                     });

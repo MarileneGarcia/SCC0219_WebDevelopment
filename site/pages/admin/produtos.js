@@ -198,24 +198,6 @@ var app = new Vue({
                 window.alert("Não há produtos com esse código")
             }
         },
-        dados() {
-            var codigo = null;
-            if (this.code_info != null) {
-                codigo = this.code_info.split(" ");
-                this.oculos.forEach(function(item) {
-                    if (item.code == codigo[0]) {
-                        document.getElementById("nome_info").innerHTML = item.alias;
-                        document.getElementById("preco_info").innerHTML = item.price;
-                        document.getElementById("detalhes_info").innerHTML = item.details;
-                        document.getElementById("arm_info").innerHTML = item.format;
-                        document.getElementById("tipo_info").innerHTML = item.tipo;
-                        document.getElementById("img_info").src = item.img;
-                    }
-                });
-            } else {
-                window.alert("Não há produtos com esse código")
-            }
-        },
         remove() {
             var url_remove = 'http://localhost:3002/glass/';
             var codigo = this.code_del.split(" ");

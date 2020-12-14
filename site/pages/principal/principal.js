@@ -12,7 +12,6 @@ window.onload = (event) => {
                 oculos_lista.push(item);
             }
         }).catch(err => {
-            window.alert('Erro inesperado, recarregue a página');
             console.log(err);
         })
     })
@@ -22,13 +21,46 @@ var app = new Vue({
     el: "#app",
     data: {
         glasses: oculos_lista,
-        favs: []
-
+        favs: [],
+        user: localStorage.getItem("user"),
     },
     methods: {
-        addCart() {
-            window.alert("Item adicionado ao Carrinho");
+        addCart(glass) {
+            var aux = String(glass._id);
+            const url = 'http://localhost:3002/User/cart/' + this.user;
+            const options = {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    cart: aux,
+                })
+            }
+
+            fetch(url, options).then(res => {
+                    console.log(res);
+                    return res.json();
+                }).then(res => {
+                    if (res == 'Cart updated!') {
+                        window.alert('Adicionado ao carrinho!');
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }).then(res => {
+                    if (!res) {
+                        window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
+                    }
+                }).catch(err => {
+                    console.log(err);
+                })
+                /*localStorage.setItem("user", this.user);
+                this.user.cart.push(oculos);
+                this.delete();
+                this.create();*/
         },
+
         helo() {
             console.log(this.glasses);
         },
@@ -61,10 +93,9 @@ var app = new Vue({
                     this.favs.splice(i, 1);
                 }
             }
-        }
-    },
-
-});
+        },
+    }
+}, );
 
 function w3_open() {
     //  document.getElementById("main").style.marginLeft = "25%";

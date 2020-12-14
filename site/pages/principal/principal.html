@@ -91,7 +91,7 @@
                         <a href="../product/glass.html"><img class="glassimg" :src="item.img"></a>
                         <h3>{{item.alias}}</h3>
                         <h4>R$: {{item.price}}</h4>
-                        <button v-on:click="addCart()">add To Cart</button>
+                        <button v-on:click="addCart(item)">add To Cart</button>
                         <button v-on:click="fav(item)">WishList</button>
                     </div>
                 </div>

@@ -1,8 +1,11 @@
 var oculos_mv = [];
 var oculos_e = [];
 var oculos_p = [];
+var user;
 
 window.onload = (event) => {
+    this.user = localStorage.getItem("user");
+
     fetch('http://localhost:3002/glass').
     then(function(response) {
         return response.json();
