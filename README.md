@@ -83,29 +83,39 @@ Além dos seguintes requisitos:
 * O sistema deve mostrar os óculos de acordo com as categorias selecionadas.
 * O sistema deve conseguir adicionar, remover ou editar produtos.
 * O sistema deve conseguir autentificar os logins.
+* O sistema deve conseguir realizarr o cadastro de usuários.
 
 Funcionalidade extra:
 * Botão de checkout da API da Paypal
 
 ## Comentários sobre o código:
-Cada página do site foi desenvolvida em um arquivo html diferente com seu próprio arquivo de css, também foi desenvolvido um arquivo javascript para cada página utilizando vue.js para desenvolver as funcionalidades de cada página. Cada página do site foi organizado em uma pasta diferente do projeto, dentro das pastas consta os arquivos html, css e javascript referente a ela.
+Todas as páginas do projeto estão dentro da pasta pages, dentro desta, as páginas são dividias em novas pastas de acordo com sua funcionalidade. Em cada pasta consta seu arquivo html, css e javascript. O arquivo que executo o servidor está dentro da pasta bin, os arquivos glass.model.js e user.model.js determinam os dados que devem estar presentes no banco de dados dos produtos e dos usuários respectivamente e os arquivos glass.route.js e user.route.js determinam as requisições dos produto e usuários.
 
 
 ## Plano de teste:
-Nenhum teste automatizado foi performado. Porém foram utilizados teste de usabilidade com usuários (amigos e familiares), para melhoria do padrão de UI/UX. As correções de bugs foram feitas de acordo com o aparecimento dos mesmos nos momentos de teste.
+Nenhum teste automatizado foi performado. Porém foram utilizados teste de usabilidade com usuários (amigos e familiares), para melhoria do padrão de UI/UX. As correções de bugs foram feitas de acordo com o aparecimento dos mesmos nos momentos de teste. Foram feitos os seguintes testes das funcionalidades:
+* Teste de login de usuário.
+* Teste de cadastro de usuário.
+* Teste de cadastro com senha menor que 8 digitos.
+* Teste de cadstro de usuário já existente.
+* Teste de adicionar/deletar novos itens como admin.
 
 ## Resultados dos testes:
-Os resultados dos testes foram bons. O programa está responsivo e cumpre com os requisitos funcionais, porém algumas funcionalidades poderão ser aperfeiçoadas quando houver um banco de dados relacionado, deixando de ficar estático.
+Os resultados dos testes foram bons. O programa está responsivo e cumpre com os requisitos funcionais, além de se comunicar corretamente com o banco de dados remoto do atlas permitindo que seja acessado os items a venda e usuários cadastrados de qualquer máquina.
 
-## Procedimentos de construção:
-Para rodar o site, é necessário fazer o download de nossa pasta no github, extraí-la e abrir a página home.html
+## Procedimentos rodar o projeto:
+Para rodar o projeto, é necessário baixar o projeto do github extraí-lo e utilizar o seguinte comando para incializar o servidor:
+* node ./bin/www
+
+Após efetuado o comando o servior estará rodando na porta 3002. Para acessar a página incial do site é necessário entrar na url: http://localhost:3002/principal/principal.html
 
 ## Problemas:
 Um dos problemas foi o aumento do valor da compra no carrinho a partir do aumento da quantidade de um item específico.
 Não foi possível redirecionar para a página de perfil do usuário a partir da página principal após fazer o login. A página principal só irá redirecionar para a página de login mesmo que ele já tenha sido efetuado.
+Após efetuar o login, ao tentar acessar a página de dados do usuário, não é possível ver os dados do usuário que fez o login.
 
 ## Commentários:
-Nenhum comentário a ser feito.
+Para fazer acesso como administrador é necessário efetuar o login com o usuário admin e senha admin, não é possível fazer cadastro como administrador.
 
 
 
