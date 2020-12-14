@@ -100,6 +100,7 @@ Os resultados dos testes foram bons. O programa está responsivo e cumpre com os
 ## Procedimentos rodar o projeto:
 Para rodar o projeto, é necessário baixar o projeto do github extraí-lo e utilizar o seguinte comando para incializar o servidor:
 * node ./bin/www
+
 Após efetuado o comando o servior estará rodando na porta 3002. Para acessar a página incial do site é necessário entrar na url: http://localhost:3002/principal/principal.html
 
 ## Problemas:
