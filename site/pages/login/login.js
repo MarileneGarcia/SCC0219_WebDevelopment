@@ -1,4 +1,3 @@
-
 //banco de dados vai implementar essa parte
 
 var app = new Vue({
@@ -14,30 +13,22 @@ var app = new Vue({
         senha_login: null,
     },
     methods: {
-        /*checagem_login: function(e) {
+        checagem_login: function() {
             if (this.email_login == 'admin' && this.senha_login == 'admin') {
                 // enviar para o banco de dados //
                 alert("Login feito como admin");
                 window.open("../admin/admin_dados.html", "_self");
-                login = true;
-            } else if (this.email_login && this.senha_login) {
-                // enviar para o banco de dados //
-                alert("Login feito com sucesso");
-                window.open("../user/user_data.html", "_self");
-                login = true;
+                return true;
             } else {
-                alert("Por favor, preencher todos os campos");
-                login = false;
+                return false;
             }
-            e.preventDefault();
-        },*/
+        },
 
         checagem_cadastro() {
             if (this.nome && this.sobrenome && this.email && this.email && this.senha && this.confirmar_senha) {
                 if (this.senha == this.confirmar_senha) {
                     return true;
-                }
-                 else {
+                } else {
                     alert("As duas senhas devem ser iguais");
                     return false;
                 }
@@ -47,9 +38,9 @@ var app = new Vue({
             }
         },
 
-        create(){
+        create() {
             const url = 'http://localhost:3002/User/add';
-            if(this.checagem_cadastro()){
+            if (this.checagem_cadastro()) {
                 const options = {
                     method: 'POST',
                     headers: {
@@ -65,56 +56,63 @@ var app = new Vue({
 
                     })
                 }
-                
-            fetch(url, options).then(res => {
-                console.log(res);
-                return res.json();
-            }).then(res => {
-                if (res == 'User added!') {
-                    window.alert('Cadastro feito com Sucesso!');
-                    return true;
-                } else {
-                    return false;
-                }
-            }).then(res => {
-                if (!res) {
-                    window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
-                }
-            }).catch(err => {
-                console.log(err);
-            })
 
-            window.alert('Item adicionado com sucesso');
-            //window.location.reload();
+                fetch(url, options).then(res => {
+                    console.log(res);
+                    return res.json();
+                }).then(res => {
+                    if (res == 'User added!') {
+                        window.alert('Cadastro feito com Sucesso!');
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }).then(res => {
+                    if (!res) {
+                        window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
+                    }
+                }).catch(err => {
+                    console.log(err);
+                })
+
+                window.alert('Item adicionado com sucesso');
+                //window.location.reload();
             }
         },
 
-    entrar(){
-        const url = 'http://localhost:3002/User/';
-        const option_get = {
-            method: 'GET',
-        }
+        entrar() {
 
-        const username = this.email_login;
-        const password = this.senha_login;
-        fetch(url,option_get).then(res => {
-            return res.json();
-        }).then(res => {
-            res.forEach(function(item){
-                if(username == item.username && password == item.password){
-                    window.alert("deu certo");
+            if (this.checagem_login()) {
+                return true;
+            } else {
+                const url = 'http://localhost:3002/User/';
+                const option_get = {
+                    method: 'GET',
                 }
 
-            });
-            if (!res) {
-                window.alert("Erro inesperado, por favor repita a operação novamente mais tarde");
+                const username = this.email_login;
+                const password = this.senha_login;
+                fetch(url, option_get).then(res => {
+                    return res.json();
+                }).then(res => {
+                    res.forEach(function(item) {
+                        if (username == item.username && password == item.password) {
+                            window.alert("Login efetuado");
+                            window.open("../categories/category_everyglass1.html", "_self");
+                            return true;
+                        }
+                    });
+                    if (res) {
+                        window.alert("Usuário não cadastrado");
+                    }
+                }).catch(err => {
+                    console.log(err);
+                })
             }
-        }).catch(err => {
-            console.log(err);
-        })
-        
+
+
+        }
     }
-}
 
 });
 
