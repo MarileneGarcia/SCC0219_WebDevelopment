@@ -104,7 +104,7 @@ Nenhum teste automatizado foi performado. Porém foram utilizados teste de usabi
 Os resultados dos testes foram bons. O programa está responsivo e cumpre com os requisitos funcionais, além de se comunicar corretamente com o banco de dados remoto do atlas permitindo que seja acessado os items a venda e usuários cadastrados de qualquer máquina.
 
 ## Procedimentos rodar o projeto:
-Para rodar o projeto, é necessário baixar o projeto do github extraí-lo e utilizar o seguinte comando para incializar o servidor:
+Para rodar o projeto, é necessário baixar o projeto do github extraí-lo e utilizar o seguinte comando dentro do diretório *site* para incializar o servidor:
 * node ./bin/www
 
 Após efetuado o comando o servior estará rodando na porta 3002. Para acessar a página incial do site é necessário entrar na url: http://localhost:3002/principal/principal.html
@@ -114,7 +114,7 @@ Um dos problemas foi o aumento do valor da compra no carrinho a partir do aument
 Não foi possível redirecionar para a página de perfil do usuário a partir da página principal após fazer o login. A página principal só irá redirecionar para a página de login mesmo que ele já tenha sido efetuado.
 Após efetuar o login, ao tentar acessar a página de dados do usuário, não é possível ver os dados do usuário que fez o login.
 
-## Commentários:
+## Comentários:
 Para fazer acesso como administrador é necessário efetuar o login com o usuário admin e senha admin, não é possível fazer cadastro como administrador.
 
 
